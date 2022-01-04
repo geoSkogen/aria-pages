@@ -21,27 +21,29 @@ a,a:link,a:hover,a:visited,a:active {
 
 h1 {
   text-align: center;
-  font-size: 64px;
+  font-size: 56px;
 }
 
 h2 {
   text-align: center;
-  font-size: 52px;
+  font-size: 48px;
 }
 
 h3 {
   text-align: center;
-  font-size: 48px;
+  font-size: 40px;
 }
 
 h4 {
   text-align: center;
-  font-size: 40px;
+  font-size: 32px;
+  margin: 0.5em;
 }
 
 h5 {
   text-align: center;
-  font-size: 32px;
+  font-size: 24px;
+  margin: 0.5em;
 }
 
 p {
@@ -67,21 +69,63 @@ li {
   position: relative;
 }
 
+#relhead-shell {
+  width: 350px;
+}
+
 #relhead {
   color: white;
   background-color:black;
-  padding: 1em;
-  font-size: 32px;
+  padding: 1em 0 1em 0;
+  font-size: 16px;
+  font-weight: 800;
   opacity: 0.5;
   position: absolute;
   z-index: 500;
-  width: 200px;
   text-align: center;
-  top: -6.5em;
-  right: -4.25em;
+  top: -12.5em;
+  width: 100%;
+}
 
+
+#video-shell {
+  padding: 2em;
 }
 
 #myvideo {
   z-index: 100;
+  width: 350px;
+}
+
+@media only screen and (min-width:720px) {
+
+  #relhead-shell {
+    width: 700px;
+  }
+
+  #relhead {
+    font-size: 24px;
+    top: -15.66em;
+  }
+
+  #myvideo {
+    width: 700px;
+  }
+}
+
+@media only screen and (min-width:1220px) {
+
+  #relhead-shell {
+    width: 1170px;
+  }
+
+  #relhead {
+    font-size: 32px;
+    top: -18.66em;
+    left: auto;
+  }
+
+  #myvideo {
+    width: 1170px;
+  }
 }

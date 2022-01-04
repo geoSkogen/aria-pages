@@ -6,7 +6,7 @@
   <title>
   </title>
 
-  <link rel="stylesheet" href="aria-pages.css"/>
+  <link rel="stylesheet" href="css/aria-pages.css"/>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -30,17 +30,7 @@
     <div class="flex-row flex-center">
       <p>This is some content</p>
     </div>
-    <header>
-      <div class="flex-row flex-center">
-        <video id="myvideo" src="simple.mp4" muted="true" loop="true" controls autoplay="true">
-        </video>
-      </div>
-    </header>
-    <div class="flex-row flex-center">
-      <div class="relshell">
-        <p id="relhead">Abso-lutely</p>
-      </div>
-    </div>
+
     <nav>
       <h2>
         List A Links

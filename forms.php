@@ -15,8 +15,6 @@ if (!empty($_POST)) {
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +23,7 @@ if (!empty($_POST)) {
   <title>
   </title>
 
-  <link rel="stylesheet" href="#"/>
+  <link rel="stylesheet" href="css/aria-pages.css"/>
 
   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 
@@ -67,7 +65,7 @@ if (!empty($_POST)) {
       ?>
 
       <label for="season_input" >I am a</label>
-      <select id="season_input" title="Bone Money" aria-description="I think you should leave now.">
+      <select id="season_input" title="Bones Are Money" aria-description="I think you should leave now.">
         <option value="spring">spring</option>
         <option value="summer">summer</option>
         <option value="fall">winter</option>
@@ -82,7 +80,6 @@ if (!empty($_POST)) {
 
   </div>
 </body>
-
 
 <script type="application/javascript">
 
@@ -126,5 +123,4 @@ document.querySelector('#validate_button').addEventListener('click', function (e
   }
 })
 </script>
-
 </html>
