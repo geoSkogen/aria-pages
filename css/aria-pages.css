@@ -52,11 +52,12 @@ p {
 
 
 ul {
-
+  margin: 1em;
 }
 
 li {
   font-size: 20px;
+  margin: 1em;
 }
 
 #alert-banner {
