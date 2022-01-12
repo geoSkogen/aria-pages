@@ -109,8 +109,8 @@ document.querySelector('#validate_button').addEventListener('click', function (e
         ' cannot be empty'
       )
     }
-    console.log('What the fukc')
-    document.querySelector('#error_field').innerHTML = "You PooKect the Fiquer"
+    console.log('some fields were invalid')
+    document.querySelector('#error_field').innerHTML = "Some fields were invalid"
     document.querySelector('#error_field').setAttribute('role','alert')
     var timemout = setTimeout( function () { document.querySelector('.invalid').focus() }, 200 )
   } else {
