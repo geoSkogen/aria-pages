@@ -101,7 +101,7 @@ document.querySelector('#validate_button').addEventListener('click', function (e
   if (invalid.length) {
     console.log(invalid)
     for (let i = 0; i < invalid.length; i++) {
-      document.querySelector('#' + invalid[i] + '_input').placeholder = 'pukeckt'
+      document.querySelector('#' + invalid[i] + '_input').placeholder = 'error'
       document.querySelector('#' + invalid[i] + '_input').className += (document.querySelector('#' + invalid[i] + '_input').className.indexOf('invalid')===-1) ? ' invalid' : ''
       document.querySelector('#' + invalid[i] + '_label').setAttribute(
         'aria-label',
