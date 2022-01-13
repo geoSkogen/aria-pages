@@ -27,6 +27,7 @@
 <body>
 <h4>Pacific Ocean</h4>
 <h5>a bell is a cup | until it is struck</h5>
+<!--
 <header>
   <div id="video-shell" class="flex-row flex-center">
     <video id="myvideo"
@@ -44,5 +45,16 @@
     <p id="relhead">we make the path by walking</p>
   </div>
 </div>
+-->
+<h3>default</h3>
+<iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" type="text/html" width="640" height="360" /></iframe>
+<h3>no related</h3>
+<iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" type="text/html" width="640" height="360" /></iframe>
 </body>
+
+<script type="application/javascript">
+
+document.querySelector('iframe').src = document.querySelector('iframe').src  + '&rel=0'
+
+</script>
 </html>
