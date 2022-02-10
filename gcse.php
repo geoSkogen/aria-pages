@@ -25,38 +25,20 @@
 
 </head>
 <body>
-<h4>Pacific Ocean</h4>
-<h5>a bell is a cup | until it is struck</h5>
-
-<h3>no related videos</h3>
-<iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" type="text/html" width="640" height="360" /></iframe>
-<h3>default - with related videos</h3>
-<iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" type="text/html" width="640" height="360" /></iframe>
+<h1>GCSE DEMO</h1>
+<div id="___gcse_0"></div>
 </body>
-
 <script type="application/javascript">
-
-document.querySelector('iframe').src = document.querySelector('iframe').src  + '?rel=0'
-
+(function () {
+ 'use strict';
+ var cx = '65b9081553fa21c1e';
+ var gcse = document.createElement('script');
+ gcse.type = 'text/javascript';
+ gcse.async = true;
+ gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+ var s = document.getElementsByTagName('script')[0];
+ s.parentNode.insertBefore(gcse, s);
+}
+)();
 </script>
 </html>
-
-<!--
-<header>
-  <div id="video-shell" class="flex-row flex-center">
-    <video id="myvideo"
-    src="media/pnw_1.mp4"
-     muted="true"
-     loop="true"
-     controls
-     autoplay="true"
-     >
-    </video>
-  </div>
-</header>
-<div class="flex-row flex-center">
-  <div id="relhead-shell" class="relshell">
-    <p id="relhead">we make the path by walking</p>
-  </div>
-</div>
--->
