@@ -33,23 +33,30 @@ body {
 
 .ap-sidebar-wrapper {
   width: 27.33%;
+  max-width: 330px;
+  margin: 0 1em;
 }
 
 .ap-content-wrapper {
   max-width: 100%;
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1024px) {
   .ap-content-wrapper {
-    max-width: 72.66%;
+    width: 72.66%;
+    max-width: 700px;
   }
+}
+
+@media only screen and (min-width:1366px) {
+  .ap-content-wrapper { max-width: 72.66%; }
 }
 
 .ap-sidebar-wrapper {
   display: none;
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1024px) {
   .ap-sidebar-mobile {
     display: none;
   }
@@ -67,19 +74,68 @@ body {
   padding-inline-start: 0
 }
 
+#ap-quicklink-list {
+  margin-left: -1.25em;
+}
+
 #degree-details-wrapper {
   width: 100%;
 }
 
-#ap-quicklink-list li, #degree-details-list li {
-  max-width: 272px;
-  margin: 1em 0.5em;
+#ap-quicklink-list li {
+  margin: 0.5em 0.5em;
+  max-width: 330px;
+}
 
+#degree-details-list li {
+  margin: 1.25em 0.5em;
+  max-width: 300px;
+}
+
+@media only screen and (min-width:1024px) {
+  #ap-quicklink-list li, #degree-details-list li {
+    min-width: 260px;
+  }
+}
+
+#ap-quicklink-list li a {
+  padding: 0.5em 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.00078rem;
+  text-decoration: none;
+}
+
+@media only screen and (min-width:1024px) {
+  #ap-quicklink-list li a {
+    padding: 0.5em 1em;
+    font-size: 1.125rem;
+  }
+}
+
+.ap-quicklink-icon {
+  font-size: 1em;
+  margin: 0.125em;
+}
+
+.quicklink-arrow {
+  font-size: 1.5em;
+}
+
+#ap-quicklink-list li a:link,
+#ap-quicklink-list li a:active,
+#ap-quicklink-list li a:visited,
+#ap-quicklink-list li a:hover  {
+  color: black;
+  text-decoration: none;
 }
 
 .degree-type-icon {
   margin-right: 1em;
   margin-top: 0.5em;
+  width: 20%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .degree-type-icon abbr, .degree-map-wrapper {
@@ -87,12 +143,29 @@ body {
   color: white;
   background-color: black;
   padding: 0.5em;
+  text-align: center;
 }
 
 .degree-type-icon abbr {
   border-radius: 100%;
+  vertical-align: middle;
+  padding: none;
+}
+
+.degree-map-wrapper a {
+  padding: 0 1em;
 }
 
 .degree-map-wrapper a:link, .degree-map-wrapper a:visited, .degree-map-wrapper a:active, .degree-map-wrapper a:hover {
   color: white;
+  width: 100%;
+}
+
+.ap-article-section h2 {
+  margin-top: 0.5em;
+}
+
+.better-hr {
+  background-color: darkslategrey;
+  width: 90%;
 }
