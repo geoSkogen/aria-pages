@@ -1,0 +1,98 @@
+body {
+  font-family: "Oswald", Arial, sans-serif;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-col {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ap-page {
+  width: 100%;
+}
+
+.ap-sidebar-wrapper {
+  width: 27.33%;
+}
+
+.ap-content-wrapper {
+  max-width: 100%;
+}
+
+@media only screen and (min-width:768px) {
+  .ap-content-wrapper {
+    max-width: 72.66%;
+  }
+}
+
+.ap-sidebar-wrapper {
+  display: none;
+}
+
+@media only screen and (min-width:768px) {
+  .ap-sidebar-mobile {
+    display: none;
+  }
+  .ap-sidebar-wrapper {
+    display: block;
+  }
+}
+
+.row-item {
+  margin: 0 0.75em;
+}
+
+#ap-quicklink-list, #degree-details-list {
+  list-style : none;
+  padding-inline-start: 0
+}
+
+#degree-details-wrapper {
+  width: 100%;
+}
+
+#ap-quicklink-list li, #degree-details-list li {
+  max-width: 272px;
+  margin: 1em 0.5em;
+
+}
+
+.degree-type-icon {
+  margin-right: 1em;
+  margin-top: 0.5em;
+}
+
+.degree-type-icon abbr, .degree-map-wrapper {
+  font-weight: 800;
+  color: white;
+  background-color: black;
+  padding: 0.5em;
+}
+
+.degree-type-icon abbr {
+  border-radius: 100%;
+}
+
+.degree-map-wrapper a:link, .degree-map-wrapper a:visited, .degree-map-wrapper a:active, .degree-map-wrapper a:hover {
+  color: white;
+}
