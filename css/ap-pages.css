@@ -31,27 +31,86 @@ body {
   width: 100%;
 }
 
-.ap-sidebar-wrapper {
-  width: 27.33%;
-  max-width: 330px;
-  margin: 0 1em;
-}
-
 .ap-content-wrapper {
   max-width: 100%;
 }
 
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
 @media only screen and (min-width:1024px) {
+  .ap-sidebar-wrapper {
+    width: 27.3%;
+    max-width: 380px;
+    margin: 0 1em;
+  }
   .ap-content-wrapper {
-    width: 72.66%;
+    width: 72.6%;
     max-width: 700px;
   }
 }
 
 @media only screen and (min-width:1366px) {
-  .ap-content-wrapper { max-width: 72.66%; }
+  .ap-content-wrapper { max-width: 960px; }
 }
 
+.paragraph-useful-links {
+  padding-top: 1em;
+}
+
+li.useful-link-item {
+  min-width: 302px;
+}
+
+li.useful-link-item a {
+  width: fit-content !important;
+  font-size: 1.25rem !important;
+  margin-right: 2em;
+  font-weight: 450 !important;
+}
+
+li.useful-link-item a .fas {
+  font-size: 1rem !important;
+  width: 25px !important;
+}
+
+li.useful-link-item span {
+  margin: 0 0.5em;
+}
+
+li.useful-link-cta {
+  margin-left: 1em;
+}
+
+li.field-degree-details-item {
+  min-height: fit-content !important;
+  min-width: 280px;
+  max-width: 300px;
+}
+
+li.field-degree-details-item {
+  min-height: fit-content !important;
+  min-width: 280px;
+  max-width: 300px;
+}
+
+li.field-degree-details-item .field-certification {
+  width: 50px;
+}
+
+li.field-degree-details-item .field-certification .acronym-term {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.field__label {
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+/*
 .ap-sidebar-wrapper {
   display: none;
 }
@@ -74,8 +133,10 @@ body {
   padding-inline-start: 0
 }
 
-#ap-quicklink-list {
-  margin-left: -1.25em;
+@media only screen and (min-width:1024px) {
+  #ap-quicklink-list {
+    margin-left: -1.25em;
+  }
 }
 
 #degree-details-wrapper {
@@ -169,3 +230,4 @@ body {
   background-color: darkslategrey;
   width: 90%;
 }
+*/
