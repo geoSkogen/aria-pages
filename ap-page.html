@@ -23,7 +23,6 @@
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
 
-
 </head>
 <body>
   <main>
@@ -90,12 +89,21 @@
             </li>
 
           </ul>
-        </div>
+          <hr class="better-hr"></hr>
+          <div class="ap-sidebar " id="college-dept-wrapper-aux">
+            <div class="keyval-pair">
+              <div class="key">College</div>
+              <a href="" class="val">College of Liberal Arts and Sciences</a>
+            </div> <!-- end degree details wrappers -->
+            <div class="keyval-pair">
+              <div class="key">Department</div>
+              <a href="" class="val">Environmental Science and Management</a>
+            </div>
+          </div>
+        </div> <!-- end quicklinks wrapper -->
 
-        <hr class="better-hr"></hr>
         <!-- -->
-        <div class="flex-row flex-center">
-
+        <div class="ap-sidebar-degree-details-college-dept-shell">
           <div class="ap-sidebar paragraph-degree-details" id="degree-details-wrapper">
             <!-- HOOK: field--paragraph--field-degree-details-items--degree-details -->
             <h2>Degree Details</h2>
@@ -105,7 +113,9 @@
                 <div class="cert-details-wrapper d-flex flex-lg-row">
                   <!-- Certificate icon and text. -->
                   <div class="d-sm-flex d-md-flex align-items-stretch flex-sm-column flex-medium-row flex-xl-column justify-content-start flex-wrap px-2 pt-4 certification-item">
+                    <!-- HOOK: field--paragraph--degree-details-item -->
                     <div class="field field--name-field-undergraduate-certificatio field--type-entity-reference field--label-hidden ml-3 field__item">
+                      <!-- HOOK: taxonomy-term--undergraduate-certification -->
                       <div class="field-certification">
                         <span class="acronym-term bachelor-of-arts" data-certification="bachelor-of-arts">
                           <abbr class="acronym-abbr" title="bachelor-of-arts">BA</abbr>
@@ -118,17 +128,17 @@
                   </div>
                   <!-- Degree Details. -->
                   <div class="d-sm-flex d-md-flex align-items-stretch flex-sm-column flex-medium-row flex-xl-column flex-nowrap align-top py-4 pl-4 pr-0 details-item">
-                    <!-- HOOK: field-paragraph--field-total-credits--degree-details-item -->
+                    <!-- HOOK: field--paragraph--field-total-credits--degree-details-item -->
                     <div class="field field--name-field-total-credits field--type-string field--label-inline flex-row flex-start">
                       <div class="field__label">Total Credits</div>
                       <div class="field__item">180</div>
                     </div>
-                    <!-- HOOK: field-paragraph--field-start-term--degree-details-item -->
+                    <!-- HOOK: field--paragraph--field-start-term--degree-details-item -->
                     <div class="field field--name-field-start-term field--type-string field--label-inline flex-row flex-start">
                       <div class="field__label">Start Term</div>
                       <div class="field__item">Any</div>
                     </div>
-                    <!-- HOOK: field-paragraph--field-locations--degree-details-item -->
+                    <!-- HOOK: field--paragraph--field-locations--degree-details-item -->
                     <div class="field field--name-field-locations field--type-entity-reference field--label-inline">
                       <div class="field__label">Delivery Method</div>
                       <div class="field__items">
@@ -157,7 +167,9 @@
                 <div class="cert-details-wrapper d-flex flex-lg-row">
                   <!-- Certificate icon and text. -->
                   <div class="d-sm-flex d-md-flex align-items-stretch flex-sm-column flex-medium-row flex-xl-column justify-content-start flex-wrap px-2 pt-4 certification-item">
-                    <div class="field field--name-field-undergraduate-certificatio field--type-entity-reference field--label-hidden ml-3 field__item">
+                    <!-- HOOK: field--paragraph--degree-details-item -->
+                    <div class="field field--name-field-undergraduate-certification field--type-entity-reference field--label-hidden ml-3 field__item">
+                      <!-- HOOK: taxonomy-term--undergraduate-certification.html.twig' -->
                       <div class="field-certification">
                         <span class="acronym-term bachelor-of-science" data-certification="bachelor-of-arts">
                           <abbr class="acronym-abbr" title="bachelor-of-science">BS</abbr>
@@ -170,15 +182,17 @@
                   </div>
                  <!-- Degree Details. -->
                   <div class="d-sm-flex d-md-flex align-items-stretch flex-sm-column flex-medium-row flex-xl-column flex-nowrap align-top py-4 pl-4 pr-0 details-item">
-
+                    <!-- HOOK: field--paragraph--field-total-credits--degree-details-item -->
                     <div class="field field--name-field-total-credits field--type-string field--label-inline flex-row flex-start">
                       <div class="field__label">Total Credits</div>
                       <div class="field__item">180</div>
                     </div>
+                    <!-- HOOK: field--paragraph--field-start-term--degree-details-item -->
                     <div class="field field--name-field-start-term field--type-string field--label-inline flex-row flex-start">
                       <div class="field__label">Start Term</div>
                       <div class="field__item">Any</div>
                     </div>
+                    <!-- HOOK: field--paragraph--field-locations--degree-details-item -->
                     <div class="field field--name-field-locations field--type-entity-reference field--label-inline">
                       <div class="field__label">Delivery Method</div>
                       <div class="field__items">
@@ -193,6 +207,7 @@
                 <div class="d-flex flex-column">
                 <!-- Degree Details link. -->
                   <div class="degree-details-item-cta-ribbon">
+                  <!-- HOOK: field--paragraph--field-degree-planner-link--degree-details-item.html.twig
                   <!-- Using the field_degree_planner (PDF) for now and will use field_degree_planner_link in the future. -->
                     <div class="field field--name-field-degree-planner-link field--type-link field--label-hidden cta-degree-planner-link-ribbon">
                       <a href="https://www.pdx.edu/registration/business-administration-accounting-bachelor-arts-2021-22-degree-map" class="btn cta-degree-planner-link-item" aria-label="Degree Planner for Bachelor of Arts">
@@ -205,82 +220,28 @@
             </ul>
 
             <p class="learn-more" id="ap-delivery-methods">
-              <span>Learn more about our </span><a href="">delivery methods</a>
+              <span>Learn more about our academic program</span><a class="ap-learn-more-link" href="">delivery methods</a>
             </p>
+            <hr class="better-hr"></hr>
+          </div> <!-- end degree details wrapper -->
+
+          <div class="ap-sidebar" id="college-dept-wrapper">
+            <div class="keyval-pair">
+              <div class="key">College</div>
+              <a href="" class="val ap-learn-more-link">College of Liberal Arts and Sciences</a>
+            </div> <!-- end degree details wrappers -->
+            <div class="keyval-pair">
+              <div class="key">Department</div>
+              <a href="" class="val ap-learn-more-link">Environmental Science and Management</a>
+            </div>
           </div>
 
-        </div>
-
-        <hr class="better-hr"></hr>
-
-        <div class="ap-sidebar" id="college-dept-wrapper">
-          <div class="keyval-pair">
-            <div class="key">College</div>
-            <a href="" class="val">College of Liberal Arts and Sciences</a>
-          </div>
-          <div class="keyval-pair">
-            <div class="key">Department</div>
-            <a href="" class="val">Environmental Science and Management</a>
-          </div>
-        </div>
+        </div> <!-- end degree-details / college-dept wrapper -->
 
       </div> <!-- end sidebar wrapper -->
+
       <div class="ap-content-wrapper">
-        <!--
-        <div class="ap-sidebar-mobile flex-row flex-center" id="ap-quicklinks-wrapper">
-          <ul class="link-list flex-row flex-start" id="ap-quicklink-list">
-            <li>
-              <a href="" class="ap-quicklink">
-                <i class="fa fa-users ap-quicklink-icon advising"></i>
-                <span class="quicklink-anchor-text">Advising</span>
-                <span class="quicklink-arrow">&raquo;</span>
-              </a>
-            </li>
-            <li>
-              <a href="" class="ap-quicklink">
-                <i class="fa fa-question-circle ap-quicklink-icon "></i>
-                <span class="quicklink-anchor-text">Info Sessions</span>
-                <span class="quicklink-arrow">&raquo;</span>
-              </a>
-            </li>
-            <li>
-              <a href="" class="ap-quicklink">
-                <i class="fa fa-briefcase ap-quicklink-icon"></i>
-                <span class="quicklink-anchor-text">Careers</span>
-                <span class="quicklink-arrow">&raquo;</span>
-              </a>
-            </li>
-            <li>
-              <a href="" class="ap-quicklink">
-                <i class="fa fa-calculator ap-quicklink-icon"></i>
-                <span class="quicklink-anchor-text">Tuition</span>
-                <span class="quicklink-arrow">&raquo;</span>
-              </a>
-            </li>
-            <li>
-              <a href="" class="ap-quicklink">
-                <i class="fa fa-check-square ap-quicklink-icon"></i>
-                <span class="quicklink-anchor-text">Admission Details</span>
-                <span class="quicklink-arrow">&raquo;</span>
-              </a>
-            </li>
-            <li>
-              <a href="" class="ap-quicklink">
-                <i class="fa fa-university ap-quicklink-icon"></i>
-                <span class="quicklink-anchor-text">Apply Now</span>
-                <span class="quicklink-arrow">&raquo;</span>
-              </a>
-            </li>
-            <li>
-              <a href="" class="ap-quicklink quicklink-cta">
-                <i class="fa fa-info-circle ap-quicklink-icon"></i>
-                <span class="quicklink-anchor-text">Request Info</span>
-                <span class="quicklink-arrow">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        -->
+
         <section class="ap-article-section" id="ap-article-overview">
           <h2>Environmental Studies - Undergraduate Program Overview</h2>
           <!--<h3>This is H3 for the 'overview'</h3>-->
@@ -289,84 +250,14 @@
           <p>Sed facilisis odio libero. Mauris maximus tristique nibh nec egestas. Suspendisse potenti. Pellentesque pharetra varius cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In vestibulum luctus ante, eu porta risus cursus a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
         </section>
 
-        <!--
-        <div class="ap-sidebar-mobile-wrapper flex-row flex-center">
-
-          <div class="ap-sidebar-mobile row-item" id="degree-details-wrapper-mobile">
-            <h3>Degree Details</h3>
-            <ul class="snapshot-list flex-row flex-center" id="degree-details-list">
-              <li>
-                <div class="degree-snapshot-wrapper flex-row flex-center">
-                  <div class="degree-type-icon"><abbr class="bs">BS</abbr></div>
-                  <div class="degree-snapshot-info">
-                    <div class="keyval-pair">
-                      <div class="key">Total Credits</div>
-                      <div class="val">180</div>
-                    </div>
-                    <div class="keyval-pair">
-                      <div class="key">Start Term</div>
-                      <div class="val">Any</div>
-                    </div>
-                    <div class="keyval-pair">
-                      <div class="key">Delivery Method</div>
-                      <div class="val">On Campus</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="degree-map-wrapper">
-                  <a href="">Degree Map</a>
-                </div>
-              </li>
-              <li>
-                <div class="degree-snapshot-wrapper flex-row flex-center">
-                  <div class="degree-type-icon"><abbr class="ba">BA</abbr></div>
-                  <div class="degree-snapshot-info">
-                    <div class="keyval-pair">
-                      <div class="key">Total Credits</div>
-                      <div class="val">180</div>
-                    </div>
-                    <div class="keyval-pair">
-                      <div class="key">Start Term</div>
-                      <div class="val">Any</div>
-                    </div>
-                    <div class="keyval-pair">
-                      <div class="key">Delivery Method</div>
-                      <div class="val">On Campus</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="degree-map-wrapper">
-                  <a href="">Degree Map</a>
-                </div>
-              </li>
-            </ul>
-            <p class="learn-more" id="ap-delivery-methods">
-              <span>Learn more about our </span><a href="">delivery methods</a>
-            </p>
-          </div>
-
-        </div>
-        -->
-
         <section class="ap-article-section" id="ap-article-why-psu">
-          <h2>Environmental Studies Bachelor's Degree: Why PSU</h2>
+          <h2>Environmental Studies Bachelor's Degree: Why PSU?</h2>
           <h3>This is H3 for the 'why PSU'</h3>
           <p>Etiam viverra mollis elit, eget tempus tellus. Integer non enim elementum, pellentesque urna posuere, consectetur ligula. Sed facilisis odio libero. Mauris maximus tristique nibh nec egestas.</p>
           <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In vestibulum luctus ante, eu porta risus cursus. Sed facilisis odio libero. Mauris maximus tristique nibh nec egestas. Suspendisse potenti. Pellentesque pharetra varius cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ultrices, nisl nec ornare porta, magna velit ultrices elit, nec gravida quam sem a urna. Integer non enim elementum, pellentesque urna posuere, consectetur ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ultrices, nisl nec ornare porta, magna velit ultrices elit, nec gravida quam sem a urna.</p>
           <p>Integer non enim elementum, pellentesque urna posuere, consectetur ligula. Sed facilisis odio libero. Mauris maximus tristique nibh nec egestas. Suspendisse potenti. Pellentesque pharetra varius cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In vestibulum luctus ante, eu porta risus cursus a. </p>
         </section>
-        <!--
-        <div class="ap-sidebar-mobile row-item flex-col flex-center" id="college-dept-wrapper">
-          <div class="keyval-pair">
-            <div class="key">College</div>
-            <a href="" class="val">College of Liberal Arts and Sciences</a>
-          </div>
-          <div class="keyval-pair">
-            <div class="key">Department</div>
-            <a href="" class="val">Environmental Science and Management</a>
-          </div>
-        </div>
-        -->
+
         <section class="ap-article-section" id="ap-article-what-can-i-do">
           <h2>What Can I Do with a Bachelor's in Environmental Studies?</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra mollis elit, eget tempus tellus. Integer non enim elementum, pellentesque urna posuere, consectetur ligula. Sed facilisis odio libero. Mauris maximus tristique nibh nec egestas. Suspendisse potenti. Pellentesque pharetra varius cursus, parturient montes, nascetur ridiculus mus. Fusce ultrices, nisl nec ornare porta, magna velit ultrices elit, nec gravida quam sem a urna.</p>
@@ -374,7 +265,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra mollis elit, eget tempus tellus. Integer non enim elementum, pellentesque urna posuere, consectetur ligula. Sed facilisis odio libero. Mauris maximus tristique nibh nec egestas. Suspendisse potenti. Pellentesque pharetra varius cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In vestibulum luctus ante, eu porta risus cursus a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ultrices, nisl nec ornare porta, magna velit ultrices elit, nec gravida quam sem a urna. Integer non enim elementum, pellentesque urna posuere, consectetur ligula. Sed facilisis odio libero. Mauris maximus tristique nibh nec egestas. Suspendisse potenti. Pellentesque pharetra varius cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In vestibulum luctus ante, eu porta risus cursus a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
         </section>
 
-      </div>
+      </div><!-- end content wrapper -->
 
     </article>
   </main>
