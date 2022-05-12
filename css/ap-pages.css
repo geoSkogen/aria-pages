@@ -2,6 +2,11 @@ body {
   font-family: "Oswald", Arial, sans-serif;
 }
 
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
 .flex-row {
   display: flex;
   flex-flow: row wrap;
@@ -38,9 +43,19 @@ body {
   max-width: 100%;
 }
 
-ul {
-  list-style: none;
-  padding-inline-start: 0;
+.ap-sidebar-wrapper,
+#ap-quicklinks-wrapper {
+  width: 100%;
+}
+
+#ap-quicklinks-wrapper {
+  background-color: #eee;
+}
+
+@media only screen and (min-width: 720px) {
+  #ap-quicklinks-wrapper {
+    background-color: #fff;
+  }
 }
 
 #college-dept-wrapper-aux {
@@ -50,7 +65,7 @@ ul {
 #college-dept-wrapper .key,
 #college-dept-wrapper-aux .key {
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 @media only screen and (min-width:720px) and (max-width:1048px) {
@@ -59,7 +74,9 @@ ul {
     flex-flow: row wrap;
     justify-content: center;
   }
-
+  #ap-quicklinks-wrapper {
+    width: fit-content;
+  }
   #college-dept-wrapper {
     display: none;
   }
@@ -87,21 +104,33 @@ ul {
 .paragraph-useful-links {
   padding-top: 1em;
 }
+@media only screen and (min-width:1048px) {
+  li.useful-link-item {
+    min-width: 346px;
+  }
+}
 
-li.useful-link-item {
-  min-width: 302px;
+li.useful-link-cta {
+  margin-left: 1.5em;
 }
 
 li.useful-link-item a {
   width: fit-content !important;
-  font-size: 1.25rem !important;
+  height: fit-content !important;
+  font-size: 1.5rem !important;
   margin-right: 2em;
-  font-weight: 450 !important;
+  font-weight: 400 !important;
+  padding-top: 0.16rem;
 }
 
-li.useful-link-item a .fas {
-  font-size: 1rem !important;
-  width: 25px !important;
+li.useful-link-cta a {
+  padding-left: 0;
+  padding-right: 0.75em;
+  padding-top: 0.25em;
+  padding-bottom: 0.33em;
+  border-width: 3.33px;
+  margin-top: 0.166rem;
+  background-color: #fafafa;
 }
 
 li.useful-link-item span {
@@ -114,8 +143,23 @@ li.useful-link-item a:active span {
   text-decoration: none;
 }
 
+li.useful-link-item a .fas {
+  width: 25px !important;
+  margin-bottom: -0.33rem;
+}
+
+li.useful-link-item a:hover span,
+li.useful-link-item a:focus span,
+li.useful-link-item a:active span {
+  text-decoration: none;
+}
+
 li.useful-link-item span.arrow {
   display: none;
+}
+
+li.useful-link-item span:not(.arrow) {
+  font-size: 1.33rem;
 }
 
 @media only screen and (min-width: 1048px) {
@@ -124,33 +168,100 @@ li.useful-link-item span.arrow {
   }
 }
 
-li.useful-link-cta {
-  margin-left: 1em;
+ul.degree-details-list {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+@media only screen and (min-width:720px) {
+  ul.degree-details-list {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+li.field-degree-details-item {
+  margin-bottom: 2.1rem;
 }
 
 li.field-degree-details-item, .learn-more {
   min-height: fit-content !important;
   min-width: 280px;
-  max-width: 300px;
+  max-width: inherit;
+}
+
+@media only screen and (min-width:720px) {
+  li.field-degree-details-item, .learn-more { max-width: 300px; }
 }
 
 li.field-degree-details-item .field-certification {
   width: 50px;
 }
 
+li.field-degree-details-item .details-item,
+.learn-more,
+#college-dept-wrapper,
+#college-dept-wrapper-aux {
+  font-family: "Montserrat", sans-serif;
+}
+
+li.field-degree-details-item .details-item {
+  padding: 1rem 0;
+  font-size: 1rem !important;
+}
+
 li.field-degree-details-item .field-certification .acronym-term {
-  width: 50px;
-  height: 50px;
+  width: 56px !important;
+  height: 50px !important;
   border-radius: 100%;
 }
 
-.field__label {
-  font-weight: bold;
+.paragraph--type--degree-details-item .field__label {
+  font-weight: 900;
   margin-right: 0.5em;
+}
+
+li.field-degree-details-item .field__item {
+  font-weight: 500;
+}
+
+.field--name-field-locations .field__items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding-left: 0 !important;
+}
+
+.field--name-field-locations .field__items .field__item {
+  padding: 0 0.25em;
 }
 
 @media only screen and (max-width: 767px) {
   .degree-details-item-cta-ribbon {
     margin-top: 0 !important;
   }
+}
+
+.cta-degree-planner-link-item {
+  font-size: 1.2rem !important;
+}
+
+.learn-more {
+  padding: 0.33rem;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.ap-learn-more-link {
+  color : #000000;
+}
+
+.learn-more .ap-learn-more-link {
+  margin-left: 0.33em;
+}
+
+#college-dept-wrapper,
+#college-dept-wrapper-aux {
+  font-size: 1.15rem;
+  max-width: 324px;
 }
