@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/ap-pages.css"/>
   <link rel="stylesheet" href="css/psu.css"/>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
       integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -28,7 +28,7 @@
   <main>
     <h1 style="text-align:center;"><span>Undergraduate Program</span><br/>Environmental Studies</h1>
 
-    <article id="ap-page" class="flex-row flex-center">
+    <article id="ap-page">
 
       <div class="ap-sidebar-wrapper">
 
@@ -36,6 +36,13 @@
           <!-- HOOK: field--paragraph--field-degree-details-usefullinks--degree-details -->
           <ul class="useful-link-list " id="useful-link-list" aria-labelledby="useful-link-label">
           <!-- HOOK:  paragraph--degree-details-useful-links -->
+          <li class=" useful-link-item">
+            <a href="" class="btn btn-icon-no-border flex-row justify-content-start">
+              <span class="fas fa-book-open"></span>
+              Admission Details
+              <span class="fas fa-angle-double-right arrow"></span>
+            </a>
+          </li>
             <li class=" useful-link-item">
               <a href="" class="btn btn-icon-no-border flex-row justify-content-start">
                 <span class="fas fa-users"></span>
@@ -71,7 +78,13 @@
                 <span class="fas fa-angle-double-right arrow"></span>
               </a>
             </li>
-
+            <li class=" useful-link-item">
+              <a href="" class="btn btn-icon-no-border  flex-row justify-content-start">
+                <span class="fas fa-university"></span>
+                Transfer Details
+                <span class="fas fa-angle-double-right arrow"></span>
+              </a>
+            </li>
             <li class=" useful-link-item">
               <a href="" class="btn btn-icon-no-border flex-row justify-content-start">
                 <span class="fas fa-door-open"></span>
@@ -104,6 +117,7 @@
 
         <!-- -->
         <div class="ap-sidebar-degree-details-college-dept-shell">
+          <div id="degree-details-shell">
           <div class="ap-sidebar paragraph-degree-details" id="degree-details-wrapper">
             <!-- HOOK: field--paragraph--field-degree-details-items--degree-details -->
             <h2>Degree Details</h2>
@@ -224,7 +238,7 @@
             </p>
             <hr class="better-hr"></hr>
           </div> <!-- end degree details wrapper -->
-
+          </div>
           <div class="ap-sidebar" id="college-dept-wrapper">
             <div class="keyval-pair">
               <div class="key">College</div>
