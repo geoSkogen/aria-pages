@@ -109,11 +109,18 @@ ul {
 @media only screen and (min-width:1048px) {
   li.useful-link-item {
     min-width: 346px;
+    margin-top:0.25rem;
   }
 }
 
 li.useful-link-cta {
   margin-left: 1.5em;
+}
+
+@media only screen and (min-width:1048px) {
+  li.useful-link-cta {
+    margin-top: 0.75rem;
+  }
 }
 
 li.useful-link-item a {
@@ -146,7 +153,6 @@ li.useful-link-item a:active span {
 }
 
 li.useful-link-item a .fas {
-  width: 25px !important;
   margin-bottom: -0.33rem;
 }
 
@@ -159,10 +165,13 @@ li.useful-link-item a:active span {
 li.useful-link-item span.arrow {
   font-size: 1.2rem;
   display: none;
+  margin-top: -0.165rem;
+  width: 20px !important;
 }
 
 li.useful-link-item span:not(.arrow) {
   font-size: 1.33rem;
+  width: 25px !important;
 }
 
 @media only screen and (min-width: 1048px) {
