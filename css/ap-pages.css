@@ -146,9 +146,9 @@ li.useful-link-item span {
   margin: 0 0.5em;
 }
 
-li.useful-link-item a:hover span,
-li.useful-link-item a:focus span,
-li.useful-link-item a:active span {
+li.useful-link-item a:hover > span,
+li.useful-link-item a:focus > span,
+li.useful-link-item a:active > span {
   text-decoration: none;
 }
 
@@ -210,6 +210,10 @@ li.field-degree-details-item .field-certification {
   width: 50px;
 }
 
+.paragraph-degree-details .degree-details-list > li .field-certification .acronym-abbr {
+  font-weight: 500;
+}
+
 li.field-degree-details-item .details-item,
 .learn-more,
 #college-dept-wrapper,
@@ -255,7 +259,13 @@ li.field-degree-details-item .field__item {
 }
 
 .cta-degree-planner-link-item {
-  font-size: 1.2rem !important;
+  font-size: 1.25rem !important;
+}
+
+.paragraph-degree-details .degree-details-list > li .field-certification .acronym-term.bachelor-of-arts,
+.paragraph-degree-details .degree-details-list > li.bachelor-of-arts .cta-degree-planner-link-ribbon a {
+  background-color: #6A7F10 !important;
+  color: #ffffff;
 }
 
 .learn-more {
