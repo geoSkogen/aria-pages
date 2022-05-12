@@ -41,6 +41,7 @@ ul {
 
 .ap-content-wrapper {
   max-width: 100%;
+  padding-left: 1.66rem;
 }
 
 .ap-sidebar-wrapper,
@@ -104,6 +105,7 @@ ul {
 .paragraph-useful-links {
   padding-top: 1em;
 }
+
 @media only screen and (min-width:1048px) {
   li.useful-link-item {
     min-width: 346px;
@@ -155,6 +157,7 @@ li.useful-link-item a:active span {
 }
 
 li.useful-link-item span.arrow {
+  font-size: 1.2rem;
   display: none;
 }
 
@@ -250,6 +253,7 @@ li.field-degree-details-item .field__item {
   padding: 0.33rem;
   font-size: 1.15rem;
   margin-bottom: 0.5rem;
+  line-height: 1.33;
 }
 
 .ap-learn-more-link {
