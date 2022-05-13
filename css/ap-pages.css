@@ -54,6 +54,7 @@ ul.degree-details-list,
 
 .better-hr {
   background-color: #BFBFBF;
+  color: #BFBFBF;
 }
 
 .mobile-hr {
@@ -145,6 +146,12 @@ ul.degree-details-list,
 
 .paragraph-useful-links {
   padding-top: 1em;
+}
+
+@media only screen and (min-width:1048px) {
+  ul.useful-link-list {
+    margin-bottom: 3rem;
+  }
 }
 
 @media only screen and (min-width:1048px) {
