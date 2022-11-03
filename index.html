@@ -7,7 +7,6 @@
   </title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Oswald:300,400,500">
   <link rel="stylesheet" href="css/aria-pages.css"/>
-  <link rel="stylesheet" href="css/translator-widget.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -25,25 +24,12 @@
 
 </head>
 <body>
-  <h2>This is a test of the Google Translate front-end API</h2>
-
-  <a id="open_translate_link" aria-label="open translator widget" href="#translate">
-    <img id="open_translate_icon" src="translate.png">
-  </a>
-
-  <div id="google_translate_wrapper">
-    <div id="translate_widget_header" class="flex_between">
-      <p id="translate_widget_title">Translate This Page</p>
-      <a id="close_translate_link" aria-label="close translator widget" href="#close_translate">&times;</a>
-    </div>
-    <div id="google_translate_element"></div>
+  <div class="flex-row flex-center">
+    <header>
+      <h1><span>&lt;</span>h<sub>1</sub><span>&gt;</span></h1>
+      <h2>a bell is a cup</h2>
+      <h3>until it is struck</h3>
+    </header>
   </div>
-
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-    }
-  </script>
 </body>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </html>

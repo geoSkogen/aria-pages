@@ -19,28 +19,32 @@ a,a:link,a:hover,a:visited,a:active {
   justify-content: center;
 }
 
-h1 {
+header > h1, header > h2, header > h3 {
+  text-align: center;
+}
+
+h1.jumbo {
   text-align: center;
   font-size: 56px;
 }
 
-h2 {
+h2.jumbo {
   text-align: center;
   font-size: 48px;
 }
 
-h3 {
+h3.jumbo {
   text-align: center;
   font-size: 40px;
 }
 
-h4 {
+h4.jumbo {
   text-align: center;
   font-size: 32px;
   margin: 0.5em;
 }
 
-h5 {
+h5.jumbo {
   text-align: center;
   font-size: 24px;
   margin: 0.5em;
