@@ -44,7 +44,7 @@ if (!empty($_POST)) {
 </head>
 <body>
   <div id="app">
-    <h2>sumit dis form</h2>
+    <h2>Submit this form.</h2>
     <form id="alert-test" method="POST" action="forms.php">
       <?php
       foreach( $field_names as $name => $label) {
@@ -65,7 +65,7 @@ if (!empty($_POST)) {
       ?>
 
       <label for="season_input" >I am a</label>
-      <select id="season_input" title="Bones Are Money" aria-description="I think you should leave now.">
+      <select id="season_input" title="season selector" aria-description="which season describes you best">
         <option value="spring">spring</option>
         <option value="summer">summer</option>
         <option value="fall">winter</option>
@@ -75,7 +75,7 @@ if (!empty($_POST)) {
              style="height:1px;width:1px;opacity:0;"
       />
     </form>
-    <button id="validate_button">sumit</button>
+    <button id="validate_button">submit</button>
     <p id="error_field"></p>
 
   </div>

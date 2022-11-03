@@ -32,7 +32,7 @@ ul {
   justify-content: space-between;
 }
 
-#ap-page, #degree-details-shell {
+#ap-page, .degree-details-shell {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -46,7 +46,7 @@ ul {
 .ap-content-wrapper,
 ul.degree-details-list,
 .paragraph-degree-details p.learn-more,
-#college-dept-wrapper,
+.college-dept-wrapper,
 .better-hr  {
   margin-left: 3%;
   margin-right: 3%;
@@ -77,34 +77,36 @@ ul.degree-details-list,
   }
 }
 
+//
 .ap-sidebar-wrapper,
-#ap-quicklinks-wrapper {
+.paragraph-academic-program-quicklinks {
   width: 100%;
 }
 
-#ap-quicklinks-wrapper {
+.paragraph-academic-program-quicklinks {
   background-color: #eee;
   padding-bottom: 0.1rem;
 }
 
 @media only screen and (min-width: 720px) {
-  #ap-quicklinks-wrapper {
+  .paragraph-academic-program-quicklinks {
     background-color: #fff;
   }
 }
+//
 
-#college-dept-wrapper-aux {
+.college-dept-wrapper-aux {
   display: none;
 }
 
-#college-dept-wrapper .key,
-#college-dept-wrapper-aux .key {
+.college-dept-wrapper .key,
+.college-dept-wrapper-aux .key {
   text-transform: uppercase;
   font-weight: 800;
 }
 
-#college-dept-wrapper .keyval-pair,
-#college-dept-wrapper-aux .keyval-pair {
+.college-dept-wrapper .keyval-pair,
+.college-dept-wrapper-aux .keyval-pair {
   margin-top: 0.75rem;
 }
 
@@ -114,13 +116,13 @@ ul.degree-details-list,
     flex-flow: row wrap;
     justify-content: center;
   }
-  #ap-quicklinks-wrapper {
+  .paragraph-academic-program-quicklinks {
     width: fit-content;
   }
-  #college-dept-wrapper {
+  .college-dept-wrapper {
     display: none;
   }
-  #college-dept-wrapper-aux {
+  .college-dept-wrapper-aux {
     display: block;
   }
   .hidden-tablet-hr {
@@ -148,29 +150,34 @@ ul.degree-details-list,
   padding-top: 1em;
 }
 
+//
 @media only screen and (min-width:1048px) {
   ul.useful-link-list {
     margin-bottom: 3rem;
   }
 }
-
+//
+//
 @media only screen and (min-width:1048px) {
   li.useful-link-item {
     min-width: 346px;
     margin-top:0.25rem;
   }
 }
-
+//
+//
 li.useful-link-cta {
   margin-left: 1.5em;
 }
-
+//
+//
 @media only screen and (min-width:1048px) {
   li.useful-link-cta {
     margin-top: 0.75rem;
   }
 }
-
+//
+//
 li.useful-link-item a {
   width: fit-content !important;
   height: fit-content !important;
@@ -179,7 +186,8 @@ li.useful-link-item a {
   font-weight: 400 !important;
   padding-top: 0.16rem;
 }
-
+//
+//
 li.useful-link-cta a {
   padding-left: 0;
   padding-right: 0.75em;
@@ -189,7 +197,7 @@ li.useful-link-cta a {
   margin-top: 0.166rem;
   background-color: #fafafa;
 }
-
+//
 li.useful-link-item span {
   margin: 0 0.5em;
 }
@@ -200,9 +208,11 @@ li.useful-link-item a:active > span {
   text-decoration: none;
 }
 
+//
 li.useful-link-item a .fas {
   margin-bottom: -0.33rem;
 }
+//
 
 li.useful-link-item a:hover span,
 li.useful-link-item a:focus span,
@@ -210,23 +220,27 @@ li.useful-link-item a:active span {
   text-decoration: none;
 }
 
+//
 li.useful-link-item span.arrow {
   font-size: 1.2rem;
   display: none;
   margin-top: -0.165rem;
   width: 20px !important;
 }
-
+//
+//
 li.useful-link-item span:not(.arrow) {
   font-size: 1.33rem;
   width: 25px !important;
 }
-
+//
+//
 @media only screen and (min-width: 1048px) {
   li.useful-link-item span.arrow {
     display: block;
   }
 }
+//
 
 .paragraph-degree-details h2 {
   padding-left:1.5rem;
@@ -263,8 +277,8 @@ li.field-degree-details-item .field-certification {
 
 li.field-degree-details-item .details-item,
 .learn-more,
-#college-dept-wrapper,
-#college-dept-wrapper-aux {
+.college-dept-wrapper,
+.college-dept-wrapper-aux {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -330,8 +344,8 @@ li.field-degree-details-item .field__item {
   margin-left: 0.33em;
 }
 
-#college-dept-wrapper,
-#college-dept-wrapper-aux {
+.college-dept-wrapper,
+.college-dept-wrapper-aux {
   font-size: 1.15rem;
   max-width: 324px;
 }
