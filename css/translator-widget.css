@@ -2,16 +2,31 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-h1 {
+h1,h2 {
   text-align: center;
 }
 
 .demo-content {
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 #demo-text {
   font-size: 24px;
+}
+
+a#open_translate_link {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 0 0 2rem !important;
+  font-size: 72px;
+  position: fixed;
+  bottom: 2rem;
+  border: 2px solid black;
+}
+
+img#open_translate_icon {
+  width: 66px;
+  height: auto;
 }
 
 #google_translate_widget {
@@ -54,20 +69,6 @@ a#close_translate_link {
 
 a#close_translate_link:focus {
   border: 2px solid #fff;
-}
-
-a#open_translate_link {
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 0 0 2rem !important;
-  font-size: 72px;
-  position: fixed;
-  bottom: 2rem;
-}
-
-img#open_translate_icon {
-  width: 66px;
-  height: auto;
 }
 
 #google_translate_element {
