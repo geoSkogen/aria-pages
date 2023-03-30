@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>
+    Design Patterns | ARIA Pages
+  </title>
+  <link rel="stylesheet" href="../css/aria-pages.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"/> -->
+
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
+
+
+</head>
+<body>
+  <header>
+    <h1>Design Patterns</h1>
+  </header>
+  <article>
+    <h2>Accordion Panels</h2>
+    <section id="accordion-panels" class="flex-row flex-center">
+      <div class="flex-panel">
+        <h3 class="accordion-header">
+          <button id="expand-nav-links" class="dropdown-header-button flex-row flex-between" aria-controls="nav-links" aria-expanded="false">
+            <span class="dropdown-header-text">A11y Pages</span>
+            <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+          </button>
+        </h3>
+        <nav class="accordion-content" id="nav-links" aria-hidden="true" aria-labelledby="expand-nav-links">
+          <ul>
+            <li>
+              <a href="../google-translate/index.html">Translate</a>
+            </li>
+            <li>
+              <a href="../fonts.html">Fonts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex-panel">
+        <h3 class="accordion-header">
+          <button id="expand-panel-a" class="dropdown-header-button flex-row flex-between" aria-controls="panel-a" aria-expanded="false">
+            <span class="dropdown-header-text">Info Panel A</span>
+            <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+          </button>
+        <h3>
+        <p class="accordion-content" id="panel-a" aria-hidden="true" aria-labelledby="expand-panel-a">This is the content for info panel A</p>
+      </div>
+      <div class="flex-panel">
+        <h3 class="accordion-header">
+          <button id="expand-panel-b" class="dropdown-header-button flex-row flex-between" aria-controls="panel-b" aria-expanded="false">
+            <span class="dropdown-header-text">Info Panel B</span>
+            <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+          </button>
+        <h3>
+        <p class="accordion-content" id="panel-b" aria-hidden="true">This is the content for info panel B</p>
+      </div>
+      <div class="flex-panel">
+        <h3 class="accordion-header">
+          <button id="expand-info-form" class="dropdown-header-button flex-row flex-between" aria-controls="info-form" aria-expanded="false">
+            <span class="dropdown-header-text">Request more info</span>
+            <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+          </button>
+        <h3>
+        <form class="accordion-content" id="info-form" aria-hidden="true" aria-labelledby="expand-info-form">
+          <div class="flex-row flex-between">
+            <label for="name-field">Name</label><input id="name-field" autocomplete="on" type="text"/>
+          </div>
+          <div class="flex-row flex-between">
+            <label for="phone-field">Phone</label><input id="phone-field" autocomplete="on" type="tel"/>
+          </div>
+          <div class="flex-row flex-between">
+            <label for="email-field">Email</label><input id="email-field" autocomplete="on" type="email"/>
+          </div>
+        </form>
+      </div>
+    </section>
+  </article>
+</body>
+<script src="../lib/accordion-panels.js"></script>
+</html>

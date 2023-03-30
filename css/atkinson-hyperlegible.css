@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'atkinson-hyperlegible';
+	src: url('../atkinson-hyperlegible/WebFonts/WOFF2/Atkinson-Hyperlegible-Regular-102a.woff2');
+	font-style: normal;
+	font-weight: normal;
+}
+
+.atkinson-hyperlegible {
+	//font-size:20px;
+	line-height:200%;
+	color: #191A42;
+	font-family: atkinson-hyperlegible !important;
+}

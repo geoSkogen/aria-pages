@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>
+  </title>
+  <link rel="stylesheet" href="css/opendyslexie.css"/>
+  <link rel="stylesheet" href="css/atkinson-hyperlegible.css"/>
+  <link rel="stylesheet" href="css/aria-pages.css"/>
+
+
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+  <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"/> -->
+
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
+
+
+</head>
+<body data-toggle="false">
+  <header>
+    <h1>Fonts</h1>
+  </header>
+
+  <article class="flex-row flex-center">
+
+    <section id="opendyslexie" >
+      <h2>Hello OpenDyslexie</h2>
+      <p>The quick brown fox jumped over the lazy dog.</p>
+      <button id="od-translate-button">opendyslexie</button>
+    </section>
+
+    <section id="atkinson-hyperlegible" >
+      <h2>Hello Atkinson Hyperlegible</h2>
+      <p>The quick brown fox jumped over the lazy dog.</p>
+      <button id="ah-translate-button">atkinson-hyperlegible</button>
+    </section>
+
+  </article>
+
+</body>
+
+<script>
+document.querySelector('#od-translate-button').addEventListener('click', function (event) {
+  let classnames = ['opendyslexie','helvetica']
+  if (JSON.parse(document.querySelector('#opendyslexie').getAttribute('data-toggle'))) {
+    classnames.reverse()
+  }
+  document.querySelector('#opendyslexie').setAttribute(
+    'data-toggle',
+    JSON.stringify(
+     !JSON.parse(document.querySelector('#opendyslexie').getAttribute('data-toggle'))
+    )
+  )
+  document.querySelector('#opendyslexie').className = classnames[0]
+  event.target.innerText = classnames[1]
+})
+document.querySelector('#ah-translate-button').addEventListener('click', function (event) {
+  let classnames = ['atkinson-hyperlegible','helvetica']
+  if (JSON.parse(document.querySelector('#atkinson-hyperlegible').getAttribute('data-toggle'))) {
+    classnames.reverse()
+  }
+  document.querySelector('#atkinson-hyperlegible').setAttribute(
+    'data-toggle',
+    JSON.stringify(
+     !JSON.parse(document.querySelector('#atkinson-hyperlegible').getAttribute('data-toggle'))
+    )
+  )
+  document.querySelector('#atkinson-hyperlegible').className = classnames[0]
+  event.target.innerText = classnames[1]
+})
+</script>
+
+</html>
