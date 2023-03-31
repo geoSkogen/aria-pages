@@ -1,0 +1,35 @@
+ul.menubar {
+
+}
+
+ul.menubar li {
+  display: inline-block;
+  margin: 0;
+  position: relative;
+}
+
+span.top-level-menu-item {
+  color: whitesmoke;
+  font-size: 1.5rem;
+  background-color: darkblue;
+  padding: 0.33rem 1.33rem;
+  border: 2.33px solid lightgrey;
+}
+
+span.top-level-menu-item[aria-expanded="true"] {
+  background-color: whitesmoke;
+  color: darkblue;
+  border: 2.33px solid darkblue;
+}
+
+ul.secondary-menu {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  padding: 1rem;
+}
+
+ul.secondary-menu li {
+  display: block;
+  padding: 0.25rem 0.5rem;
+}

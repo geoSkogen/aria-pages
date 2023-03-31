@@ -120,6 +120,10 @@ li {
   margin: 0.5rem 0;
 }
 
+nav {
+  margin: 1rem 0; 
+}
+
 nav > ul > li {
   font-size: 1.25rem;
 }

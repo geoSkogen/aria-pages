@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>
+    Accordion Panels | Design Patterns | ARIA Pages
+  </title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:500">
+  <link rel="stylesheet" href="../css/aria-pages.css"/>
+  <link rel="stylesheet" href="../css/menubar.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"/> -->
+
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
+
+</head>
+<body>
+  <div class="flex-row flex-center">
+    <header>
+      <p class="code" aria-hidden="true"><span>&lt;</span>a11y<span>&gt;</span></p>
+      <h1>Design Patterns</h1>
+    </header>
+    <h2></h2>
+  </div>
+  <ul id="breadcrumb-list" aria-label="breadcrumb">
+    <li><a class="breadcrumb-link" href="..">ARIA Pages</a></li>
+    <li><a class="breadcrumb-link" href="index.html">Design Patterns</a></li>
+    <li><span aria-current="page">Menu Bar & Menus</span></li>
+  </ul>
+  <div class="flex-row flex-center">
+    <h2>Menu Bar & Menus</h2>
+  </div>
+  <nav class="flex-row flex-center">
+    <ul class="menubar" role="menubar">
+      <li role="none">
+        <span class="top-level-menu-item" role="menuitem" tabindex="0" aria-expanded="false">Silo A</span>
+        <ul class="secondary-menu menu" role="menu" tabindex="-1">
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">A item 1</li>
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">A item 2</li>
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">A item 3</li>
+        </ul>
+      </li>
+      <li role="none">
+        <span class="top-level-menu-item" role="menuitem" tabindex="0" aria-expanded="false">Silo B</span>
+        <ul class="secondary-menu menu" role="menu" tabindex="-1">
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">B item 1</li>
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">B item 2</li>
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">B item 3</li>
+        </ul>
+      </li>
+      <li role="none">
+        <span class="top-level-menu-item" role="menuitem" tabindex="0" aria-expanded="false">Silo C</span>
+        <ul class="secondary-menu menu" role="menu" tabindex="-1">
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">C item 1</li>
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">C item 2</li>
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">C item 3</li>
+        </ul>
+      </li>
+      <li role="none">
+        <span class="top-level-menu-item" role="menuitem" tabindex="0" aria-expanded="false">Silo D</span>
+        <ul class="secondary-menu menu" role="menu" tabindex="-1">
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">D item 1</li>
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">D item 2</li>
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">D item 3</li>
+        </ul>
+      </li>
+      <li role="none">
+        <span class="top-level-menu-item" role="menuitem" tabindex="0" aria-expanded="false">Silo E</span>
+        <ul class="secondary-menu menu" role="menu" tabindex="-1">
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">E item 1</li>
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">E item 2</li>
+          <li class="secondary-menu-item" role="menuitem" tabindex="-1">E item 3</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <article>
+  </article>
+</body>
+<script src="../lib/menubar.js"></script>
+</html>
