@@ -4,6 +4,8 @@ body {
 
 a,a:link,a:hover,a:visited,a:active {
   text-decoration: none;
+  padding: 0.75rem;
+  margin: 0.5rem 0.25rem;
 }
 
 button {
@@ -16,88 +18,30 @@ button {
   cursor: pointer
 }
 
-h3 > button.dropdown-header-button {
-  font-size: 1.5rem;
-}
-
-h3.accordion-header {
-  margin-block-start: 0 !important;
-  margin-block-end: 0 !important;
-}
-
-button.dropdown-header-button {
-  width: 100%;
-  border: 3.33px solid white;
-}
-
-button.dropdown-header-button:hover {
-  border: 3.33px solid darkgrey;
-}
-
-button.dropdown-header-button[aria-expanded="true"] {
-  border: 3.33px solid black;
-}
-
-span.dropdown-header-text {
-  display: inline-block;
-  pointer-events: none;
-}
-
-button > i {
-  pointer-events: none;
-  font-size: 2rem !important;
-  font-weight: 300 !important;
-}
-
-button#close-modal {
-  background-color: red;
-  color: white;
-  font-size: 20px;
-  padding: 0.2rem;
-}
-
-div#dialog-shell {
-  position: relative;
-}
-
-div#dialog-backdrop {
-  background: grey;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  position: fixed;
-}
-
-div#dialog-box {
-  background-color: white;
-  position: absolute;
-  top: 20%;
-  padding: 1rem;
-}
-
 p {
   padding: 0.5rem;
 }
 
 form {
-  padding: 0.5rem;
-}
-
-form.modal-form {
-  width: 66%;
+  margin: 0.75rem 0.5rem 0.5rem 0.5rem;
 }
 
 label {
   display: inline-block;
+  font-size: 1.2rem;
 }
 
 input {
   display: inline-block;
+  font-size: 20px;
+  border: 2.33px solid cornflowerblue;
+  margin: 0.33rem;
+  padding: 0.33rem 0.4rem 0.25rem 0.4rem;;
+  border-radius: 6.66px;
 }
 
-.accordion-content {
-  display: none;
+.form-field-row {
+  margin: 0 0.25rem 0.75rem 0.25rem;
 }
 
 .flex-row {
@@ -121,13 +65,6 @@ input {
   justify-content: space-between;
 }
 
-.flex-panel {
-  width: 320px;
-}
-
-#accordion-panels {
-  width: 320px;
-}
 
 header > h1, header > h2 {
   text-align: center;
@@ -164,9 +101,14 @@ p {
   font-size: 20px;
 }
 
+p.code {
+  font-family: "Roboto Mono";
+  font-size: 16px;
+}
+
 
 ul {
-  margin: 1em 0;
+  margin: 0.5rem 0;
   list-style: none;
   margin-block-start: 0 !important;
   margin-block-end: 0 !important;
@@ -175,76 +117,27 @@ ul {
 }
 
 li {
-  font-size: 20px;
+  margin: 0.5rem 0;
 }
 
-#alert-banner {
-  background-color: red;
-  color: white;
-  padding: 2em;
+nav > ul > li {
+  font-size: 1.25rem;
+}
+
+ul#breadcrumb-list li {
+  display: inline;
+}
+
+a.breadcrumb-link {
+  padding: 0.25rem;
+  margin: 0;
+}
+
+a.breadcrumb-link::after {
+  content: "\00BB";
+  margin: 0 0 0 0.33rem;
 }
 
 .relshell {
   position: relative;
-}
-
-#relhead-shell {
-  width: 350px;
-}
-
-#relhead {
-  color: white;
-  background-color:black;
-  padding: 1em 0 1em 0;
-  font-size: 16px;
-  font-weight: 800;
-  opacity: 0.5;
-  position: absolute;
-  z-index: 500;
-  text-align: center;
-  top: -12.5em;
-  width: 100%;
-}
-
-
-#video-shell {
-  padding: 2em;
-}
-
-#myvideo {
-  z-index: 100;
-  width: 350px;
-}
-
-@media only screen and (min-width:720px) {
-
-  #relhead-shell {
-    width: 700px;
-  }
-
-  #relhead {
-    font-size: 24px;
-    top: -15.66em;
-  }
-
-  #myvideo {
-    width: 700px;
-  }
-}
-
-@media only screen and (min-width:1220px) {
-
-  #relhead-shell {
-    width: 1170px;
-  }
-
-  #relhead {
-    font-size: 32px;
-    top: -18.66em;
-    left: auto;
-  }
-
-  #myvideo {
-    width: 1170px;
-  }
 }

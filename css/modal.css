@@ -1,0 +1,33 @@
+button#close-modal {
+  background-color: red;
+  color: white;
+  font-size: 32px;
+  padding: 0 0.4rem;
+  opacity: 0.6;
+}
+
+div#dialog-shell {
+  position: relative;
+}
+
+div#dialog-backdrop {
+  background: grey;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  display: none;
+}
+
+div#dialog-box {
+  background-color: white;
+  position: absolute;
+  top: 20%;
+  padding: 1.5rem;
+  opacity: 1 !important;
+}
+
+form.modal-form {
+  width: 66%;
+}

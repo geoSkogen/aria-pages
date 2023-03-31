@@ -6,7 +6,9 @@
   <title>
     Modal Dialog | Design Patterns | ARIA Pages
   </title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:500">
   <link rel="stylesheet" href="../css/aria-pages.css"/>
+  <link rel="stylesheet" href="../css/modal.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -24,38 +26,52 @@
 
 </head>
 <body>
-  <header>
-    <h1>Design Patterns</h1>
-  </header>
-  <h2>Modal Dialog</h2>
-  <button id="open-modal" toggle-display="dialog-backdrop">Request Info</button>
-  <div id="dialog-shell">
-    <div id="dialog-backdrop" class="flex-row flex-center" aria-hidden="true">
-      <div id="dialog-box" role="dialog" aria-modal="true" aria-labelledby="dialog-label">
-        <div class="flex-row flex-end">
-          <button id="close-modal" aria-label="close dialog" toggle-display="dialog-backdrop">&times;</button>
-        </div>
-        <h3 id="dialog-label">Request Info</h3>
-        <p>You're the Greatest&mdash;the Best in the Northwest.</p>
-        <div class="flex-row flex-start">
-          <form id="info-form" class="modal-form">
-            <div class="flex-row flex-end">
+  <div class="flex-row flex-center">
+    <header>
+      <p class="code" aria-hidden="true"><span>&lt;</span>a11y<span>&gt;</span></p>
+      <h1>Design Patterns</h1>
+    </header>
+  </div>
+  <ul id="breadcrumb-list" aria-label="breadcrumb">
+    <li><a class="breadcrumb-link" href="..">ARIA Pages</a></li>
+    <li><a class="breadcrumb-link" href="index.html">Design Patterns</a></li>
+    <li><span aria-current="page">Modal Dialog</span></li>
+  </ul>
+  <article>
+    <div class="flex-row flex-center">
+      <h2>Modal Dialog</h2>
+    </div>
+    <div class="flex-row flex-center">
+      <button id="open-modal" toggle-display="dialog-backdrop">Request Info</button>
+    </div>
+    <div id="dialog-shell">
+      <div id="dialog-backdrop" class="flex-row flex-center" aria-hidden="true">
+        <div id="dialog-box" role="dialog" aria-modal="true" aria-labelledby="dialog-label">
+          <div class="flex-row flex-end">
+            <button id="close-modal" aria-label="close dialog" toggle-display="dialog-backdrop">&times;</button>
+          </div>
+          <h3 id="dialog-label">Request Info</h3>
+          <p>You're the Greatest&mdash;the Best in the Northwest.</p>
+          <div class="flex-row flex-center">
+            <form id="info-form" class="modal-form">
               <label for="name-field">Name</label>
-              <input id="name-field" autocomplete="on" type="text"/>
-            </div>
-            <div class="flex-row flex-end">
+              <div class="form-field-row flex-row flex-end">
+                <input id="name-field" autocomplete="on" type="text"/>
+              </div>
               <label for="phone-field">Phone</label>
-              <input id="phone-field" autocomplete="on" type="tel"/>
-            </div>
-            <div class="flex-row flex-end">
+              <div class="form-field-row flex-row flex-end">
+                <input id="phone-field" autocomplete="on" type="tel"/>
+              </div>
               <label for="email-field">Email</label>
-              <input id="email-field" autocomplete="on" type="email"/>
-            </div>
-          </form>
+              <div class="form-field-row flex-row flex-end">
+                <input id="email-field" autocomplete="on" type="email"/>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </article>
 </body>
 <script src="../lib/modal-dialog.js"></script>
 </html>

@@ -1,0 +1,45 @@
+h3 > button.dropdown-header-button {
+  font-size: 1.5rem;
+}
+
+h3.accordion-header {
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+button.dropdown-header-button {
+  width: 100%;
+  border: 3.33px solid white;
+}
+
+button.dropdown-header-button:hover {
+  border: 3.33px solid darkgrey;
+}
+
+button.dropdown-header-button[aria-expanded="true"] {
+  border: 3.33px solid black;
+}
+
+span.dropdown-header-text {
+  display: inline-block;
+  pointer-events: none;
+}
+
+button > i {
+  pointer-events: none;
+  font-size: 2rem !important;
+  font-weight: 300 !important;
+}
+
+#accordion-panels {
+  width: 320px;
+}
+
+.flex-panel {
+  width: 320px;
+}
+
+.accordion-content {
+  padding: 1rem;
+  display: none;
+}
