@@ -4,7 +4,7 @@
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <title>
-    Design Patterns | ARIA Pages
+    Accordion Panels | Design Patterns | ARIA Pages
   </title>
   <link rel="stylesheet" href="../css/aria-pages.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,7 +20,6 @@
   <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
-
 
 </head>
 <body>
@@ -54,7 +53,7 @@
             <span class="dropdown-header-text">Info Panel A</span>
             <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
           </button>
-        <h3>
+        </h3>
         <p class="accordion-content" id="panel-a" aria-hidden="true" aria-labelledby="expand-panel-a">This is the content for info panel A</p>
       </div>
       <div class="flex-panel">
@@ -63,7 +62,7 @@
             <span class="dropdown-header-text">Info Panel B</span>
             <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
           </button>
-        <h3>
+        </h3>
         <p class="accordion-content" id="panel-b" aria-hidden="true">This is the content for info panel B</p>
       </div>
       <div class="flex-panel">
@@ -72,18 +71,23 @@
             <span class="dropdown-header-text">Request more info</span>
             <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
           </button>
-        <h3>
-        <form class="accordion-content" id="info-form" aria-hidden="true" aria-labelledby="expand-info-form">
-          <div class="flex-row flex-between">
-            <label for="name-field">Name</label><input id="name-field" autocomplete="on" type="text"/>
-          </div>
-          <div class="flex-row flex-between">
-            <label for="phone-field">Phone</label><input id="phone-field" autocomplete="on" type="tel"/>
-          </div>
-          <div class="flex-row flex-between">
-            <label for="email-field">Email</label><input id="email-field" autocomplete="on" type="email"/>
-          </div>
-        </form>
+        </h3>
+        <div class="flex-row flex-start">
+          <form class="accordion-content" id="info-form" aria-hidden="true" aria-labelledby="expand-info-form">
+            <div class="flex-row flex-end">
+              <label for="name-field">Name</label>
+              <input id="name-field" autocomplete="on" type="text"/>
+            </div>
+            <div class="flex-row flex-end">
+              <label for="phone-field">Phone</label>
+              <input id="phone-field" autocomplete="on" type="tel"/>
+            </div>
+            <div class="flex-row flex-end">
+              <label for="email-field">Email</label>
+              <input id="email-field" autocomplete="on" type="email"/>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </article>

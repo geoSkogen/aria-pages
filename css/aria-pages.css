@@ -4,8 +4,6 @@ body {
 
 a,a:link,a:hover,a:visited,a:active {
   text-decoration: none;
-  padding: 0.5em;
-  font-size: 24px;
 }
 
 button {
@@ -15,10 +13,29 @@ button {
   font-weight: 700;
   border: none;
   font-size: 1rem;
+  cursor: pointer
+}
+
+h3 > button.dropdown-header-button {
+  font-size: 1.5rem;
+}
+
+h3.accordion-header {
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
 }
 
 button.dropdown-header-button {
   width: 100%;
+  border: 3.33px solid white;
+}
+
+button.dropdown-header-button:hover {
+  border: 3.33px solid darkgrey;
+}
+
+button.dropdown-header-button[aria-expanded="true"] {
+  border: 3.33px solid black;
 }
 
 span.dropdown-header-text {
@@ -29,6 +46,34 @@ span.dropdown-header-text {
 button > i {
   pointer-events: none;
   font-size: 2rem !important;
+  font-weight: 300 !important;
+}
+
+button#close-modal {
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  padding: 0.2rem;
+}
+
+div#dialog-shell {
+  position: relative;
+}
+
+div#dialog-backdrop {
+  background: grey;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+}
+
+div#dialog-box {
+  background-color: white;
+  position: absolute;
+  top: 20%;
+  padding: 1rem;
 }
 
 p {
@@ -37,6 +82,10 @@ p {
 
 form {
   padding: 0.5rem;
+}
+
+form.modal-form {
+  width: 66%;
 }
 
 label {
@@ -60,12 +109,24 @@ input {
   justify-content: center;
 }
 
-.flex-panel {
-  width: 320px;
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-start {
+  justify-content: flex-start;
 }
 
 .flex-between {
   justify-content: space-between;
+}
+
+.flex-panel {
+  width: 320px;
+}
+
+#accordion-panels {
+  width: 320px;
 }
 
 header > h1, header > h2 {

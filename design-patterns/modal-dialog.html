@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>
+    Modal Dialog | Design Patterns | ARIA Pages
+  </title>
+  <link rel="stylesheet" href="../css/aria-pages.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"/> -->
+
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
+
+
+</head>
+<body>
+  <header>
+    <h1>Design Patterns</h1>
+  </header>
+  <h2>Modal Dialog</h2>
+  <button id="open-modal" toggle-display="dialog-backdrop">Request Info</button>
+  <div id="dialog-shell">
+    <div id="dialog-backdrop" class="flex-row flex-center" aria-hidden="true">
+      <div id="dialog-box" role="dialog" aria-modal="true" aria-labelledby="dialog-label">
+        <div class="flex-row flex-end">
+          <button id="close-modal" aria-label="close dialog" toggle-display="dialog-backdrop">&times;</button>
+        </div>
+        <h3 id="dialog-label">Request Info</h3>
+        <p>You're the Greatest&mdash;the Best in the Northwest.</p>
+        <div class="flex-row flex-start">
+          <form id="info-form" class="modal-form">
+            <div class="flex-row flex-end">
+              <label for="name-field">Name</label>
+              <input id="name-field" autocomplete="on" type="text"/>
+            </div>
+            <div class="flex-row flex-end">
+              <label for="phone-field">Phone</label>
+              <input id="phone-field" autocomplete="on" type="tel"/>
+            </div>
+            <div class="flex-row flex-end">
+              <label for="email-field">Email</label>
+              <input id="email-field" autocomplete="on" type="email"/>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../lib/modal-dialog.js"></script>
+</html>
