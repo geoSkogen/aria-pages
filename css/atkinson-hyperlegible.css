@@ -6,8 +6,5 @@
 }
 
 .atkinson-hyperlegible {
-	//font-size:20px;
-	line-height:200%;
-	color: #191A42;
 	font-family: atkinson-hyperlegible !important;
 }

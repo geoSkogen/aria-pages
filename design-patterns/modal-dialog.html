@@ -6,38 +6,25 @@
   <title>
     Modal Dialog | Design Patterns | ARIA Pages
   </title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:500">
+  <link rel="stylesheet" href="../css/atkinson-hyperlegible.css"/>
   <link rel="stylesheet" href="../css/aria-pages.css"/>
   <link rel="stylesheet" href="../css/modal.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"/> -->
-
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
-
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
-
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
-
-
 </head>
 <body>
+  <a id="skip-to-main" href="#main-content">Skip to main content</a>
   <div class="flex-row flex-center">
     <header>
       <p class="code" aria-hidden="true"><span>&lt;</span>a11y<span>&gt;</span></p>
-      <h1>Design Patterns</h1>
+      <h1>Design Patterns | Modal Dialog</h1>
     </header>
   </div>
   <ul id="breadcrumb-list" aria-label="breadcrumb">
-    <li><a class="breadcrumb-link" href="..">ARIA Pages</a></li>
-    <li><a class="breadcrumb-link" href="index.html">Design Patterns</a></li>
+    <li><a class="breadcrumb-link" href="..">ARIA Pages</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
+    <li><a class="breadcrumb-link" href="index.html">Design Patterns</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
     <li><span aria-current="page">Modal Dialog</span></li>
   </ul>
-  <article>
+  <article id="main-content">
     <div class="flex-row flex-center">
       <h2>Modal Dialog</h2>
     </div>
@@ -50,24 +37,26 @@
           <div class="flex-row flex-end">
             <button id="close-modal" aria-label="close dialog" toggle-display="dialog-backdrop">&times;</button>
           </div>
-          <h3 id="dialog-label">Request Info</h3>
-          <p>You're the Greatest&mdash;the Best in the Northwest.</p>
-          <div class="flex-row flex-center">
-            <form id="info-form" class="modal-form">
-              <label for="name-field">Name</label>
-              <div class="form-field-row flex-row flex-end">
-                <input id="name-field" autocomplete="on" type="text"/>
-              </div>
-              <label for="phone-field">Phone</label>
-              <div class="form-field-row flex-row flex-end">
-                <input id="phone-field" autocomplete="on" type="tel"/>
-              </div>
-              <label for="email-field">Email</label>
-              <div class="form-field-row flex-row flex-end">
-                <input id="email-field" autocomplete="on" type="email"/>
-              </div>
-            </form>
-          </div>
+          <section id="modal-content">
+            <h3 id="dialog-label">Request Info</h3>
+            <p>You're the Greatest&mdash;the Best in the Northwest.</p>
+            <div class="flex-row flex-center">
+              <form id="info-form" class="modal-form">
+                <label for="name-field">Name</label>
+                <div class="form-field-row flex-row flex-end">
+                  <input id="name-field" autocomplete="on" type="text"/>
+                </div>
+                <label for="phone-field">Phone</label>
+                <div class="form-field-row flex-row flex-end">
+                  <input id="phone-field" autocomplete="on" type="tel"/>
+                </div>
+                <label for="email-field">Email</label>
+                <div class="form-field-row flex-row flex-end">
+                  <input id="email-field" autocomplete="on" type="email"/>
+                </div>
+              </form>
+            </div>
+          </section>
         </div>
       </div>
     </div>

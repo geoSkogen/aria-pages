@@ -1,0 +1,59 @@
+dl.disclosure {
+  width: 98%;
+}
+
+@media only screen and (min-width: 720px) {
+  dl.disclosure {
+    width: 66%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  dl.disclosure {
+    width: 50%;
+  }
+}
+
+dl.disclosure > dt {
+  margin: 0.33rem;
+}
+
+
+dl.disclosure > dd {
+
+}
+
+button.disclosure-control {
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+  border: 4.5px solid white;
+}
+
+button.disclosure-control:hover {
+  border: 4.5px solid #cc9900;
+}
+
+button.disclosure-control[aria-expanded="true"] {
+  color: #0B1D84;
+  background-color: white;
+  border: 4.5px solid #0B1D84;
+}
+
+button.disclosure-control[aria-expanded="false"]::after {
+  font-family: "FontAwesome";
+  font-size: 28px;
+  content: "\f152";
+  margin-left: 1rem;
+}
+
+button.disclosure-control[aria-expanded="true"]::after {
+  font-family: "FontAwesome";
+  font-size: 28px;
+  content: "\f150";
+  margin-left: 1rem;
+}
+
+p.disclosure-info {
+  display: none;
+}

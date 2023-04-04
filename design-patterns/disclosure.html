@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>
+    Disclosure | Design Patterns | ARIA Pages
+  </title>
+  <link rel="stylesheet" href="../css/atkinson-hyperlegible.css"/>
+  <link rel="stylesheet" href="../css/aria-pages.css"/>
+  <link rel="stylesheet" href="../css/disclosure.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <a id="skip-to-main" href="#main-content">Skip to main content</a>
+  <div class="flex-row flex-center">
+    <header>
+      <p class="code" aria-hidden="true"><span>&lt;</span>a11y<span>&gt;</span></p>
+      <h1>Design Patterns | Disclosure</h1>
+    </header>
+  </div>
+
+  <ul id="breadcrumb-list" aria-label="breadcrumb">
+    <li><a class="breadcrumb-link" href="..">ARIA Pages</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
+    <li><a class="breadcrumb-link" href="index.html">Design Patterns</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
+    <li><span aria-current="page">Disclosure</span></li>
+  </ul>
+  <main id="main-content">
+    <div class="flex-row flex-center">
+      <h2>Disclosure</h2>
+    </div>
+    <article class="flex-row flex-center">
+      <dl class="disclosure">
+        <dt><button class="disclosure-control" aria-expanded="false" aria-controls="disclosure-info-0">Topic A</button></dt>
+        <dd><p class="disclosure-info" id="disclosure-info-0">Here is the content for topic A.  The content for topic A is here.</p></dd>
+        <dt><button class="disclosure-control" aria-expanded="false" aria-controls="disclosure-info-1">Topic B</button></dt>
+        <dd><p class="disclosure-info" id="disclosure-info-1">Here is the content for topic B.  The content for topic B is here.</p></dd>
+        <dt><button class="disclosure-control" aria-expanded="false" aria-controls="disclosure-info-2">Topic C</button></dt>
+        <dd><p class="disclosure-info" id="disclosure-info-2">Here is the content for topic C.  The content for topic C is here.</p></dd>
+        <dt><button class="disclosure-control" aria-expanded="false" aria-controls="disclosure-info-3">Topic D</button></dt>
+        <dd><p class="disclosure-info" id="disclosure-info-3">Here is the content for topic D.  The content for topic D is here.</p></dd>
+        <dt><button class="disclosure-control" aria-expanded="false" aria-controls="disclosure-info-4">Topic E</button></dt>
+        <dd><p class="disclosure-info" id="disclosure-info-4">Here is the content for topic E.  The content for topic E is here.</p></dd>
+      </dl>
+    </article>
+  </main>
+</body>
+<script src="../lib/disclosure.js"></script>
+</html>

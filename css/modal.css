@@ -28,6 +28,10 @@ div#dialog-box {
   opacity: 1 !important;
 }
 
+section#modal-content {
+  padding: 1rem;
+}
+
 form.modal-form {
   width: 66%;
 }

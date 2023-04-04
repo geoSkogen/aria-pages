@@ -11,15 +11,16 @@ ul.menubar li {
 span.top-level-menu-item {
   color: whitesmoke;
   font-size: 1.5rem;
-  background-color: darkblue;
-  padding: 0.33rem 1.33rem;
-  border: 2.33px solid lightgrey;
+  background-color: #0B1D84;
+  padding: 0.66rem 1.33rem;
+  border: 4.5px solid white;
+  cursor: pointer;
 }
 
 span.top-level-menu-item[aria-expanded="true"] {
   background-color: whitesmoke;
-  color: darkblue;
-  border: 2.33px solid darkblue;
+  color: #0B1D84;
+  border: 2.33px solid #0B1D84;
 }
 
 ul.secondary-menu {

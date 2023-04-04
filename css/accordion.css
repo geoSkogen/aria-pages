@@ -9,15 +9,17 @@ h3.accordion-header {
 
 button.dropdown-header-button {
   width: 100%;
-  border: 3.33px solid white;
+  border: 4.5px solid white;
 }
 
 button.dropdown-header-button:hover {
-  border: 3.33px solid darkgrey;
+  border: 4.5px solid #cc9900;
 }
 
 button.dropdown-header-button[aria-expanded="true"] {
-  border: 3.33px solid black;
+  color: #0B1D84;
+  background-color: white;
+  border: 4.5px solid #0B1D84;
 }
 
 span.dropdown-header-text {
@@ -32,11 +34,23 @@ button > i {
 }
 
 #accordion-panels {
-  width: 320px;
+  width: 98%
+}
+
+@media only screen and (min-width: 720px) {
+  #accordion-panels {
+    width: 66%
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  #accordion-panels {
+    width: 50%
+  }
 }
 
 .flex-panel {
-  width: 320px;
+  width: 100%;
 }
 
 .accordion-content {

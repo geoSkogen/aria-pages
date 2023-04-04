@@ -1,5 +1,9 @@
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'atkinson-hyperlegible';
+}
+
+.helvetica {
+  font-family: Helvetica;
 }
 
 a,a:link,a:hover,a:visited,a:active {
@@ -8,9 +12,23 @@ a,a:link,a:hover,a:visited,a:active {
   margin: 0.5rem 0.25rem;
 }
 
+a#skip-to-main {
+  height: 0px;
+  text-decoration: underline;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+a#skip-to-main:focus {
+  height: auto;
+}
+
 button {
   padding: 1rem;
-  background-color: cornflowerblue;
+  background-color: #0B1D84;
   color: white;
   font-weight: 700;
   border: none;
@@ -34,7 +52,7 @@ label {
 input {
   display: inline-block;
   font-size: 20px;
-  border: 2.33px solid cornflowerblue;
+  border: 2.33px solid #0B1D84;
   margin: 0.33rem;
   padding: 0.33rem 0.4rem 0.25rem 0.4rem;;
   border-radius: 6.66px;
@@ -63,6 +81,22 @@ input {
 
 .flex-between {
   justify-content: space-between;
+}
+
+.flex-generic > section {
+  width: 98%
+}
+
+@media only screen and (min-width: 720px) {
+  .flex-generic > section {
+    width: 75%
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .flex-generic > section {
+    width: 66%
+  }
 }
 
 
@@ -97,13 +131,29 @@ h5.jumbo {
   margin: 0.5em;
 }
 
+.big-flex-panel {
+  min-width: 320px;
+  max-width: 49%;
+  padding: 1rem;
+  margin: 1rem;
+}
+
 p {
   font-size: 20px;
 }
 
 p.code {
-  font-family: "Roboto Mono";
+  font-family: monospace;
+  font-weight: 700;
   font-size: 16px;
+}
+
+.baskerville {
+  font-family: "Baskerville";
+}
+
+.monospace {
+  font-family: monospace;
 }
 
 
@@ -121,25 +171,29 @@ li {
 }
 
 nav {
-  margin: 1rem 0; 
+  margin: 1rem 0;
 }
 
 nav > ul > li {
   font-size: 1.25rem;
 }
 
+ul#breadcrumb-list {
+  margin-left: 2rem;
+}
+
 ul#breadcrumb-list li {
   display: inline;
 }
 
-a.breadcrumb-link {
+a.breadcrumb-link, span[aria-current="page"] {
   padding: 0.25rem;
   margin: 0;
 }
 
-a.breadcrumb-link::after {
-  content: "\00BB";
+span.breadcrumb-link-delimiter {
   margin: 0 0 0 0.33rem;
+  pointer-events: none;
 }
 
 .relshell {

@@ -1,0 +1,44 @@
+form.combobox-form label,
+form.combobox-form input {
+  display: inline-block;
+}
+
+form.combobox-form label {
+  padding-top: 0.75rem;
+  padding-right: 0.5rem;
+  width: 27%;
+}
+
+form.combobox-form input[type="text"] {
+  width: 63%;
+  border-radius: 0;
+}
+
+.textbox-autocomplete {
+  margin-bottom: 0;
+}
+
+.combobox-autocomplete {
+  width: 100%;
+}
+
+.gridrow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0 0.33rem;
+  padding: 0.4rem;
+  width: 63%;
+  border-left: 2.33px solid #0B1D84;
+  border-right: 2.33px solid #0B1D84;
+}
+
+.gridrow-last {
+  border-bottom: 2.33px solid #0B1D84;
+}
+
+.gridrow-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
