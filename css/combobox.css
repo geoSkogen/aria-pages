@@ -12,6 +12,7 @@ form.combobox-form label {
 form.combobox-form input[type="text"] {
   width: 63%;
   border-radius: 0;
+  margin-bottom: 0;
 }
 
 .textbox-autocomplete {
@@ -31,6 +32,13 @@ form.combobox-form input[type="text"] {
   width: 63%;
   border-left: 2.33px solid #0B1D84;
   border-right: 2.33px solid #0B1D84;
+  cursor: pointer;
+}
+
+.gridrow-focus {
+  background-color: #0B1D84;
+  color: white;
+  font-weight: bold;
 }
 
 .gridrow-last {

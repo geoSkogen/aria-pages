@@ -30,26 +30,51 @@
     </div>
     <div class="flex-row flex-center">
       <form class="combobox-form">
+
         <div class="flex-row flex-end">
-          <label for="textbox-autocomplete" id="textbox-autocomplete-label">
+          <label for="textbox-autocomplete-grid" id="textbox-autocomplete-grid-label">
             Fruit & Veg
           </label>
           <input
-           id="textbox-autocomplete"
-           class="textbox-autocomplete"
+           id="textbox-autocomplete-grid"
+           class="textbox-autocomplete-grid"
            type="text"
            role="combobox"
            aria-haspopup="grid"
            aria-false="true"
-           aria-autocomplete="list"
-           aria-controls="autocomplete-grid"
+           aria-autocomplete="grid"
+           aria-controls="combobox-autocomplete-grid"
+           aria-expanded="false"
+           autocomplete="off"
            >
         </div>
-        <div id="combobox-autocomplete" class="combobox-autocomplete" role="grid" aria-labelledby="textbox-autocomplete-label">
+        <div id="combobox-autocomplete-grid" class="combobox-autocomplete-grid" role="grid" aria-labelledby="textbox-autocomplete-grid-label">
+        </div>
+
+        <div class="flex-row flex-end">
+          <label for="textbox-autocomplete-list" id="textbox-autocomplete-list-label">
+            Select a State
+          </label>
+          <div id="autocomplete-list-field">
+           <input
+            id="textbox-autocomplete-list"
+            class="textbox-autocomplete-list"
+            type="text"
+            role="combobox"
+            aria-haspopup="list"
+            aria-false="true"
+            aria-autocomplete="list"
+            aria-controls="combobox-autocomplete-list"
+            >
+            <button></button>
+          </div>
+        </div>
+        <div id="combobox-autocomplete-list" class="combobox-autocomplete-list" role="list" aria-labelledby="textbox-autocomplete-list-label">
         </div>
       </form>
     </div>
   </main>
 </body>
-<script src="../lib/combobox-autocomplete.js"></script>
+<script src="../lib/combobox-autocomplete-grid.js"></script>
+<script src="../lib/combobox-autocomplete-list.js"></script>
 </html>
