@@ -1,7 +1,15 @@
-.autocomplete-field {
+@media only screen and (min-width: 540px) {
+
+  form.combobox-form {
+    width: 480px
+  }
+}
+
+.autocomplete-field,.autocomplete-list-fieldset {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  position: relative;
 }
 
 @media only screen and (min-width: 540px) {
@@ -48,7 +56,7 @@ form.combobox-form input[type="text"] {
   width: 100%;
 }
 
-.gridrow {
+.gridrow, .listoption {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -61,12 +69,12 @@ form.combobox-form input[type="text"] {
 }
 
 @media only screen and (min-width: 540px) {
-  .gridrow {
+  .gridrow, .listoption {
     width: 320px;
   }
 }
 
-.gridrow-focus {
+.gridrow-focus, .listoption-focus {
   background-color: #0B1D84;
   color: white;
   font-weight: bold;
@@ -88,12 +96,6 @@ form.combobox-form input[type="text"] {
   }
 }
 
-.autocomplete-list-fieldset {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-}
-
 form.combobox-form input.textbox-autocomplete-list {
   width: 240px;
   margin-right: 0;
@@ -105,7 +107,18 @@ form.combobox-form input.textbox-autocomplete-list {
   }
 }
 
-button.autocomplete-list-button {
+ul.combobox-autocomplete-list {
+  //position: absolute;
+  right: 0;
+  //top: 2.5rem;
+  width: auto;
+}
+
+ul.combobox-autocomplete-list li:last-child {
+  border-bottom: 2.33px solid #0B1D84;
+}
+
+button.button-autocomplete-list {
   margin: 0.33rem;
   margin-bottom: 0;
   padding: 0.35rem;
@@ -113,13 +126,13 @@ button.autocomplete-list-button {
   margin-left: 0;
 }
 
-button.autocomplete-list-button[aria-expanded="false"]::after {
+button.button-autocomplete-list[aria-expanded="false"]::after {
   font-family: "FontAwesome";
   font-size: 23px;
   content: "\f150";
 }
 
-button.autocomplete-list-button[aria-expanded="true"]::after {
+button.button-autocomplete-list[aria-expanded="true"]::after {
   font-family: "FontAwesome";
   font-size: 23px;
   content: "\f151";
