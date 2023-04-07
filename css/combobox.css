@@ -1,5 +1,6 @@
-@media only screen and (min-width: 540px) {
+form.combobox-form {}
 
+@media only screen and (min-width: 540px) {
   form.combobox-form {
     width: 480px
   }
@@ -15,6 +16,18 @@
 @media only screen and (min-width: 540px) {
   .autocomplete-field {
     justify-content: flex-end;
+  }
+}
+
+.abs-shell {
+  position: absolute;
+  top: 4.8rem;
+  z-index: 99;
+}
+
+@media only screen and (min-width: 540px) {
+  .abs-shell {
+    top: 2.6rem;
   }
 }
 
@@ -34,7 +47,6 @@ form.combobox-form label {
     width: auto;
   }
 }
-
 
 form.combobox-form input[type="text"] {
   width: 280px;
@@ -109,12 +121,10 @@ form.combobox-form input.textbox-autocomplete-list-inline-autocomplete {
   }
 }
 
+div.combobox-autocomplete-grid,
 ul.combobox-autocomplete-list,
 ul.combobox-autocomplete-list-inline-autocomplete {
-  //position: absolute;
-  right: 0;
-  //top: 2.5rem;
-  width: auto;
+  background-color: white;
 }
 
 ul.combobox-autocomplete-list li:last-child,
