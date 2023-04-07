@@ -25,7 +25,7 @@ dl.disclosure > dd {
 
 button.disclosure-control {
   width: 100%;
-  text-align: right;
+  text-align: left;
   font-size: 1.5rem;
   border: 4.5px solid white;
 }
@@ -40,18 +40,18 @@ button.disclosure-control[aria-expanded="true"] {
   border: 4.5px solid #0B1D84;
 }
 
-button.disclosure-control[aria-expanded="false"]::after {
+button.disclosure-control[aria-expanded="false"]::before {
   font-family: "FontAwesome";
   font-size: 28px;
   content: "\f152";
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-button.disclosure-control[aria-expanded="true"]::after {
+button.disclosure-control[aria-expanded="true"]::before {
   font-family: "FontAwesome";
   font-size: 28px;
   content: "\f150";
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 p.disclosure-info {
