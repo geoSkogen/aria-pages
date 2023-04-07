@@ -81,10 +81,44 @@
           </div>
           </ul>
         </div>
+
+        <div class="autocomplete-field">
+          <label for="textbox-autocomplete-list-inline-autocomplete" id="textbox-autocomplete-list-inline-autocomplete-label">
+            Select a State
+          </label>
+          <div class="autocomplete-list-fieldset">
+            <input
+             id="textbox-autocomplete-list-inline-autocomplete"
+             class="textbox-autocomplete-list-inline-autocomplete"
+             type="text"
+             role="combobox"
+             aria-haspopup="list"
+             aria-false="true"
+             aria-autocomplete="list"
+             aria-controls="combobox-autocomplete-list-inline-autocomplete"
+             autocomplete="off"
+             last-manual-entry=""
+             >
+            <button
+             type="button"
+             class="button-autocomplete-list-inline-autocomplete"
+             aria-controls="combobox-autocomplete-list-inline-autocomplete"
+             aria-expanded="false"
+             tabindex="-1"
+             aria-labelledby="textbox-autocomplete-list-inline-autocomplete-label"
+             ></button>
+          </div>
+          <div>
+            <ul id="combobox-autocomplete-list-inline-autocomplete" class="combobox-autocomplete-list-inline-autocomplete" role="listbox" aria-labelledby="textbox-autocomplete-list-inline-autocomplete-label">
+          </div>
+          </ul>
+        </div>
+
       </form>
     </div>
   </main>
 </body>
 <script src="../lib/combobox-autocomplete-grid.js"></script>
 <script src="../lib/combobox-autocomplete-list.js"></script>
+<script src="../lib/combobox-autocomplete-list-inline-autocomplete.js"></script>
 </html>
