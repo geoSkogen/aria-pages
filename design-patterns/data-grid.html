@@ -4,37 +4,36 @@
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <title>
-    Design Patterns | ARIA Pages
+    Data Grid | Design Patterns | ARIA Pages
   </title>
   <link rel="stylesheet" href="../css/atkinson-hyperlegible.css"/>
   <link rel="stylesheet" href="../css/aria-pages.css"/>
+  <link rel="stylesheet" href="../css/data-grid.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <a id="skip-to-main" href="#main-content">Skip to main content</a>
   <div class="flex-row flex-center">
     <header>
       <p class="code" aria-hidden="true"><span>&lt;</span>a11y<span>&gt;</span></p>
-      <h1>Design Patterns | <span class="subheader-text">ARIA Authoring Practices Guide</span></h1>
+      <h1>Design Patterns | Data Grid</h1>
     </header>
   </div>
   <ul id="breadcrumb-list" aria-label="breadcrumb">
     <li><a class="breadcrumb-link" href="..">ARIA Pages</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
-    <li><span aria-current="page">Design Patterns</span></li>
+    <li><a class="breadcrumb-link" href="index.html">Design Patterns</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
+    <li><span aria-current="page">Data Grid</span></li>
   </ul>
   <main id="main-content">
     <div class="flex-row flex-center">
-      <h2 >Table of Contents</h2>
+      <h2>Data Grid</h2>
     </div>
-    <nav id="table-of-contents" class="flex-row flex-center">
-      <ul>
-        <li><a href="accordion-panels.html">Accordion Panels</a></li>
-        <li><a href="combobox.html">Comboboxes</a></li>
-        <li><a href="data-grid.html">Data Grid</a></li>
-        <li><a href="disclosure.html">Disclosure</a></li>
-        <li><a href="menubar.html">Menubar & Menus</a></li>
-        <li><a href="modal-dialog.html">Modal Dialog</a></li>
-      </ul>
-    </nav>
+    <div class="flex-row flex-center">
+      <h3 id="data-grid-title">Data Grid Title</h3>
+    </div>
+    <div id="data-grid-app" class="flex-row flex-center">
+    </div>
   </main>
-</body>
-</html>
+  </body>
+  <script src="../lib/data-grid.js"></script>
+  </html>
