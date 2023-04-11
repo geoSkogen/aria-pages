@@ -3,7 +3,7 @@ th.data-grid-cell {
   color: white;
   font-weight: bold;
   border: 2.33px solid white;
-  padding: 1rem;
+  position: relative;
 }
 
 th.data-grid-cell-focus {
@@ -14,6 +14,9 @@ th.data-grid-cell-focus {
 
 th.data-grid-cell > span[role="button"] {
   cursor: pointer;
+  padding: 1rem;
+  display: inline-block;
+  padding-right: 2.33rem;
 }
 
 td.data-grid-cell {
@@ -27,14 +30,42 @@ td.data-grid-cell-focus {
   background-color: gainsboro;
 }
 
-th.data-grid-cell[aria-sort="ascending"]::after {
+th.data-grid-cell::after {
   font-family: "FontAwesome";
-  content: "\f151";
   color: white;
+  position: absolute;
+  top: 1.165rem;
+  right: 0.66rem;
+}
+
+th.data-grid-cell-focus::after {
+  font-family: "FontAwesome";
+  color: #0B1D84;
+  position: absolute;
+  top: 1.165rem;
+  right: 0.2rem;
+}
+
+th.data-grid-cell[aria-sort="none"]::after {
+  content: "\f152";
+}
+
+th.data-grid-cell[aria-sort="ascending"]::after {
+  content: "\f151";
 }
 
 th.data-grid-cell[aria-sort="descending"]::after {
-  font-family: "FontAwesome";
   content: "\f150";
-  color: white;
+}
+
+th.data-grid-cell-focus[aria-sort="none"]::after {
+  content: "\f152";
+}
+
+th.data-grid-cell-focus[aria-sort="ascending"]::after {
+  content: "\f151";
+}
+
+th.data-grid-cell-focus[aria-sort="descending"]::after {
+  content: "\f150";
 }
