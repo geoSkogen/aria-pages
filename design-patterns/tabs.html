@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>
+    Tabs | Design Patterns | ARIA Pages
+  </title>
+  <link rel="stylesheet" href="../css/atkinson-hyperlegible.css"/>
+  <link rel="stylesheet" href="../css/aria-pages.css"/>
+  <link rel="stylesheet" href="../css/tabs.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="flex-row flex-center">
+    <header>
+      <p class="code" aria-hidden="true"><span>&lt;</span>a11y<span>&gt;</span></p>
+      <h1>Design Patterns | Tabs</h1>
+    </header>
+  </div>
+  <ul id="breadcrumb-list" aria-label="breadcrumb">
+    <li><a class="breadcrumb-link" href="..">ARIA Pages</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
+    <li><a class="breadcrumb-link" href="index.html">Design Patterns</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
+    <li><span aria-current="page">Tabs</span></li>
+  </ul>
+  <main id="main-content">
+    <div class="flex-row flex-center">
+      <h2>Tabs</h2>
+    </div>
+    <div class="flex-row flex-center">
+      <section class="tab-interface-wrapper">
+        <div role="tablist" class="tab-list" aria-label="tabbed interface">
+          <button role="tab" class="tab-button" aria-controls="tab-panel-a" id="tab-a" aria-selected="true">Tab A</button>
+          <button role="tab" class="tab-button" aria-controls="tab-panel-b" id="tab-b" aria-selected="false">Tab B</button>
+          <button role="tab" class="tab-button" aria-controls="tab-panel-c" id="tab-c" aria-selected="false">Tab C</button>
+        </div>
+        <div class="tab-panel-wrapper">
+          <p role="tabpanel" aria-labelledby="tab-a" class="tab-panel tab-panel-visible" id="tab-panel-a" aria-hidden="false">Tab Panel A Content.</p>
+          <p role="tabpanel" aria-labelledby="tab-b" class="tab-panel" id="tab-panel-b" aria-hidden="true">Tab Panel B Content.</p>
+          <p role="tabpanel" aria-labelledby="tab-c" class="tab-panel" id="tab-panel-c" aria-hidden="true">Tab Panel C Content.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+<script src="../lib/tabs.js"></script>
+</html>
