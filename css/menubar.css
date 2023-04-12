@@ -33,4 +33,5 @@ ul.secondary-menu {
 ul.secondary-menu li {
   display: block;
   padding: 0.25rem 0.5rem;
+  cursor: pointer;
 }

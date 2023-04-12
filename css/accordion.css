@@ -55,5 +55,9 @@ button > i {
 
 .accordion-content {
   padding: 1rem;
+  display: block;
+}
+
+.accordion-content[aria-hidden="true"] {
   display: none;
 }
