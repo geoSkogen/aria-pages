@@ -6,6 +6,10 @@ th.data-grid-cell {
   position: relative;
 }
 
+th#data-grid-anchor:hover {
+  border: 2.33px solid #cc9900;
+}
+
 th.data-grid-cell-focus {
   color: #0B1D84;
   background-color: white;
@@ -17,6 +21,11 @@ th.data-grid-cell > span[role="button"] {
   padding: 1rem;
   display: inline-block;
   padding-right: 2.33rem;
+  border: 2.33px solid #0B1D84;
+}
+
+th.data-grid-cell > span[role="button"]:hover {
+  border: 2.33px solid white;
 }
 
 td.data-grid-cell {
@@ -43,7 +52,7 @@ th.data-grid-cell-focus::after {
   color: #0B1D84;
   position: absolute;
   top: 1.165rem;
-  right: 0.2rem;
+  right: 0.66rem;
 }
 
 th.data-grid-cell[aria-sort="none"]::after {
