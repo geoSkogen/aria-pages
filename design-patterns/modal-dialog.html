@@ -29,16 +29,19 @@
       <h2>Modal Dialog</h2>
     </div>
     <div class="flex-row flex-center">
-      <button id="open-modal" toggle-display="dialog-backdrop">Request Info</button>
+      <button class="open-modal" toggle-display="demo-dialog-backdrop" toggle-overlay="demo-dialog-overlay">Request Info</button>
+      <div class="dialog-shell">
+        <div id="demo-dialog-overlay" class="dialog-overlay dialog-overlay-hidden"></div>
+      </div>
     </div>
-    <div id="dialog-shell">
-      <div id="dialog-backdrop" class="flex-row flex-center" aria-hidden="true">
-        <div id="dialog-box" role="dialog" aria-modal="true" aria-labelledby="dialog-label">
+    <div class="dialog-shell">
+      <div id="demo-dialog-backdrop" class="dialog-backdrop flex-row flex-center" aria-hidden="true">
+        <div class="dialog-box" role="dialog" aria-modal="true" aria-labelledby="dialog-label">
           <div class="flex-row flex-end">
-            <button id="close-modal" aria-label="close dialog" toggle-display="dialog-backdrop">&times;</button>
+            <button class="close-modal" aria-label="close dialog" toggle-display="demo-dialog-backdrop"  toggle-overlay="demo-dialog-overlay">&times;</button>
           </div>
-          <section id="modal-content">
-            <h3 id="dialog-label">Request Info</h3>
+          <section class="modal-content">
+            <h3 class="dialog-label">Request Info</h3>
             <p>You're the Greatest&mdash;the Best in the Northwest.</p>
             <div class="flex-row flex-center">
               <form id="info-form" class="modal-form">

@@ -1,4 +1,4 @@
-button#close-modal {
+button.close-modal {
   background-color: red;
   color: white;
   font-size: 32px;
@@ -6,21 +6,36 @@ button#close-modal {
   opacity: 0.6;
 }
 
-div#dialog-shell {
+div.dialog-shell {
   position: relative;
 }
 
-div#dialog-backdrop {
-  background: grey;
+div.dialog-overlay, div.dialog-backdrop {
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   position: fixed;
+}
+
+div.dialog-overlay {
+  background: grey;
+  opacity: 0.45;
+}
+
+div.dialog-overlay-hidden {
   display: none;
 }
 
-div#dialog-box {
+div.dialog-backdrop {
+  background: transparent;
+}
+
+div.dialog-backdrop[aria-hidden="true"]{
+  display: none;
+}
+
+div.dialog-box {
   background-color: white;
   position: absolute;
   top: 20%;
@@ -28,7 +43,7 @@ div#dialog-box {
   opacity: 1 !important;
 }
 
-section#modal-content {
+section.modal-content {
   padding: 1rem;
 }
 
