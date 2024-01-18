@@ -1,0 +1,7 @@
+#login[aria-hidden="true"] {
+  display: none;
+}
+
+#login[aria-hidden="false"] {
+  display: block;
+}
