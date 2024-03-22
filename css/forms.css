@@ -5,3 +5,117 @@
 #login[aria-hidden="false"] {
   display: block;
 }
+
+#login {
+  //position: absolute;
+}
+
+#login-wrapper {
+  position: relative;
+}
+
+.hide {
+  display: none;
+}
+
+input.switch {
+  content: url('../img/switch-off.png');
+  height: 22px;
+  width: 40px;
+}
+
+input.switch:checked {
+  content: url('../img/switch-on.png');
+  height: 22px;
+  width: 40px;
+}
+
+input[aria-hidden="true"] {
+  display: none;
+}
+
+label.toggle-switch-label, div.toggle-switch-label {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 60px;
+}
+
+input.toggle-switch {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  right: 0;
+  bottom: 40%;
+  height: 20%;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: -6px;
+  bottom: -6px;
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+  z-index: 100;
+}
+
+input.toggle-switch:checked + .toggle-slider:before,
+div.toggle-switch-label[data-checked="true"] > .toggle-slider:before {
+  background-color: green;
+}
+
+input.toggle-switch:focus + .toggle-slider,
+div.toggle-slider:focus {
+  box-shadow: 0 0 6px #2196F3;
+}
+
+input.toggle-switch:checked + .toggle-slider:before,
+div.toggle-switch-label[data-checked="true"] > .toggle-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.ghost-toggle-switch {
+  display: none;
+}
+
+/* Rounded sliders */
+.toggle-slider.round {
+  border-radius: 34px;
+}
+
+.toggle-slider.round:before {
+  border-radius: 50%;
+}
+
+div#decoy {
+  height: 600px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+iframe#target {
+  top: -446px;
+  left: 46px;
+  height: 1000px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  border: none !important;
+  opacity: 0.00001;
+}

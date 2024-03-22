@@ -1,4 +1,10 @@
 <?php
+/**
+* The 'dirty' parameter prints a GET query on the DOM without sanitizing it.
+* DEMOS
+* 1) Visit the URI /aria-pages/forms/xss-demo/?search=%3Cscript%3Ealert%28%27hello%20XSS%27%29%3C%2Fscript%3E.
+* 2) 
+*/
 $dirty_param = 'placeholder';
 if ($_GET) {
   if (isset($_GET['search'])) {

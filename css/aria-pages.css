@@ -26,14 +26,15 @@ a#skip-to-main:focus {
   height: auto;
 }
 
-button {
+button, input[type="submit"] {
   padding: 1rem;
   background-color: #0B1D84;
   color: white;
   font-weight: 700;
   border: none;
   font-size: 1rem;
-  cursor: pointer
+  cursor: pointer;
+  border-radius: 0 0 0 0 !important;
 }
 
 p {
@@ -44,7 +45,7 @@ form {
   margin: 0.75rem 0.5rem 0.5rem 0.5rem;
 }
 
-label {
+label, span.input-label {
   display: inline-block;
   font-size: 1.2rem;
 }
@@ -60,6 +61,10 @@ input {
 
 .form-field-row {
   margin: 0 0.25rem 0.75rem 0.25rem;
+}
+
+.page-wrapper, .content-wrapper {
+  max-width: 1200px;
 }
 
 .flex-row {
@@ -98,7 +103,6 @@ input {
     width: 66%
   }
 }
-
 
 header > h1, header > h2 {
   text-align: center;
