@@ -5,11 +5,11 @@
 }
 
 .field-clear {
-  padding: 1rem 0.5rem;
+  padding: 0.25rem 0.5rem;
 }
 
 label[for="enable-notifications"] {
-  margin: 0.33rem 0.33rem 0 0.33rem;
+  margin: 0.9rem 0.33rem 0 0.33rem;
 }
 
 #enable-notifications-2-label,#enable-notifications-3-label {
@@ -21,10 +21,17 @@ input[aria-hidden="true"] {
 }
 
 input.switch {
+  appearance: none;
   content: url('../img/switch-off.png');
-  height: 22px;
-  width: 40px;
+  height: 40px;
+  width: 70px;
   cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+input.switch:focus {
+  outline: 1px solid black;
 }
 
 input.switch:checked {
