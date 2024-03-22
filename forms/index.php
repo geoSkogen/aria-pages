@@ -1,10 +1,26 @@
 <?php
+
 $sms_checked = '';
 $sms_val = 'false';
+$sms_2_checked = '';
+$sms_2_val = 'false';
+$sms_3_checked = '';
+$sms_3_val = 'false';
+
 if ($_SERVER['REQUEST_METHOD']==='GET') {
+
   if ($_GET['sms']==='true') {
     $sms_checked = 'checked';
     $sms_val = 'true';
+  }
+
+  if ($_GET['sms_2']==='true') {
+    $sms_2_val = 'true';
+    $sms_2_checked = 'checked';
+  }
+
+  if ($_GET['sms_3']==='true') {
+    $sms_3_val = 'true';
   }
 }
 
@@ -72,21 +88,25 @@ if ($_SERVER['REQUEST_METHOD']==='GET') {
     </div>
     <div class="flex-row flex-center">
       <form id="aria-form" action="clickjack-demo/submit.php" method="POST">
-        <label for="enable-notifications">Enable Notifications:</label>
-        <input id="enable-notifications" type="checkbox" role="switch" class="switch" data-checked="<?php echo $sms_val ?>" name="sms" value="<?php echo $sms_val ?>" <?php echo $sms_checked ?> >
-        <br/>
-        <span id="enable-notificatios-2-label">Enable Notifications 2:</span>
-        <label id="enable-notifications-2-toggle-switch-label" class="toggle-switch-label" for="enable-notifications-2">
-          <input id="enable-notifications-2" type="checkbox" role="switch" class="toggle-switch" aria-labelledby="enable-notifications-2-label" data-checked="<?php echo $sms_2_val ?>" name="sms_2" value="<?php echo $sms_2_val ?>" <?php echo $sms_2_checked ?> >
-          <div id="enable-notifications-2-toggle-slider" class="toggle-slider round"></div>
-        </label>
-        <br/>
-        <span id="enable-notificatios-3-label">Enable Notifications 3:</span>
-        <div id="enable-notifications-3-toggle-switch-label" class="toggle-switch-label" aria-labelledby="enable-notifications-3-label" data-checked="false">
-          <div id="enable-notifications-3-toggle-slider" class="toggle-slider round" tabindex="0"></div>
+        <div class="field-clear flex-row flex-start">
+          <label for="enable-notifications">Enable notifications 1:</label>
+          <input id="enable-notifications" type="checkbox" role="switch" class="switch" name="sms" <?php echo $sms_checked; ?> value="<?php echo $sms_val; ?>" >
         </div>
-        <br/>
-        <input id="enable-notifications-3" type="checkbox" role="switch" class="ghost-toggle-switch" name="sms_3" value="<?php echo $sms_3_val ?>" <?php echo $sms_3_checked ?> >
+        <div class="field flex-row flex-start">
+          <span class="input-label" id="enable-notifications-2-label">Enable notifications 2:</span>
+          <label id="enable-notifications-2-toggle-switch-label" class="toggle-switch-label" for="enable-notifications-2">
+            <input id="enable-notifications-2" type="checkbox" role="switch" class="toggle-switch" aria-labelledby="enable-notifications-2-label" name="sms_2" <?php echo $sms_2_checked; ?> value="<?php echo $sms_2_val; ?>">
+            <div id="enable-notifications-2-toggle-slider" class="toggle-slider round"></div>
+          </label>
+        </div>
+        <div class="field flex-row flex-start">
+          <span class="input-label" id="enable-notifications-3-label">Enable notifications 3:</span>
+          <div id="enable-notifications-3-toggle-switch-label" class="toggle-switch-label" aria-labelledby="enable-notifications-3-label" data-checked="<?php echo $sms_3_val; ?>">
+            <div id="enable-notifications-3-toggle-slider" role="switch" class="toggle-slider round" tabindex="0"></div>
+          </div>
+          <br/>
+          <input id="enable-notifications-3" type="checkbox" class="ghost-toggle-switch" name="sms_3" aria-hidden="true" <?php echo $sms_3_checked; ?> value="<?php echo $sms_3; ?>">
+        </div>
         <input type="submit" value="save changes">
       </form>
     </div>

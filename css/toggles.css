@@ -1,41 +1,23 @@
-.field,.field-clear {
-  margin-bottom: 2rem;
-  border: 1px solid darkslategrey;
-  padding: 0 0.5rem;
-}
-
-.field-clear {
-  padding: 0.25rem 0.5rem;
-}
-
-label[for="enable-notifications"] {
-  margin: 0.9rem 0.33rem 0 0.33rem;
-}
-
-#enable-notifications-2-label,#enable-notifications-3-label {
-  margin: 18px 18px 0 6px;
-}
-
 input[aria-hidden="true"] {
   display: none;
 }
 
 input.switch {
   appearance: none;
-  content: url('../img/switch-off.png');
+  content: url('../img/toggle2-off.svg');
   height: 40px;
-  width: 70px;
+  width: 40px;
   cursor: pointer;
   outline: none;
   border: none;
 }
 
-input.switch:focus {
-  outline: 1px solid black;
+input.switch:checked {
+  content: url('../img/toggle2-on.svg');
 }
 
-input.switch:checked {
-  content: url('../img/switch-on.png');
+input.switch:focus {
+  outline: 1px solid black;
 }
 
 label.toggle-switch-label, div.toggle-switch-label {
@@ -104,4 +86,22 @@ div.toggle-switch-label[data-checked="true"] > .toggle-slider:before {
 
 .toggle-slider.round:before {
   border-radius: 50%;
+}
+
+.field,.field-clear {
+  margin-bottom: 2rem;
+  border: 1px solid darkslategrey;
+  padding: 0 0.5rem;
+}
+
+.field-clear {
+  padding: 0.25rem 0.5rem;
+}
+
+label[for="enable-notifications"] {
+  margin: 0.9rem 0.33rem 0 0.33rem;
+}
+
+#enable-notifications-2-label,#enable-notifications-3-label {
+  margin: 18px 18px 0 6px;
 }
