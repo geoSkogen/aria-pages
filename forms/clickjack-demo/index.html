@@ -21,12 +21,13 @@
     <div class="flex-row flex-center">
       <form method="GET" action="index.html">
         <div class="decoy-form-row">
-          <input type="submit" value="claim rewards">
+          <p id="claim-label">$500 in cash rewards:</p>
+          <input type="submit" value="claim rewards" aria-labelledby='claim-label'>
         </div>
       </form>
     </div>
   </div>
-  <iframe id="target" src="http://localhost/aria-pages/forms/?sms=true"></iframe>
+  <iframe id="target" src="http://localhost/aria-pages/forms/?sms_2=true"></iframe>
   <footer></footer>
 </body>
 <!--<script src="../../lib/forms/clickjacker.js"></script>-->

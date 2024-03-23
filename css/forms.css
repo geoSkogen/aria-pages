@@ -135,8 +135,8 @@ div#decoy {
 }
 
 iframe#target {
-  top: -446px;
-  left: 46px;
+  top: -613px;
+  left: -3px;
   height: 1000px;
   width: 100%;
   position: relative;
