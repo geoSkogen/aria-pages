@@ -33,7 +33,7 @@
         <calendar-month></calendar-month>
       </calendar-date>
     </section>
-    
+
     <div class="flex-row flex-center">
       <section id="description">
 
@@ -48,6 +48,10 @@
         <br/>
         <code class="code" style="margin-left: 1rem">
           let date_obj = new Date(event.target.value)
+        </code>
+        <br/>
+        <code class="code" style="margin-left: 1rem">
+          let iso_output_el = document.getElementById('iso-output')
         </code>
         <br/>
         <code class="code" style="margin-left: 1rem">
@@ -67,7 +71,7 @@
         </code>
         <br/>
         <code class="code" style="margin-left: 2rem;">
-          console.log(date_obj.toISOString())
+          console.log('ISO of date selected: ' + date_obj.toISOString())
         </code>
         <br/>
         <code class="code" style="margin-left: 1rem">
@@ -83,6 +87,7 @@
   </main>
 </body>
 <script>
+
 let cally = document.querySelector('calendar-date')
 cally.addEventListener('change', function (event) {
   let date_obj = new Date(event.target.value)
@@ -91,8 +96,9 @@ cally.addEventListener('change', function (event) {
     if (iso_output_el) {
       iso_output_el.innerText = date_obj.toISOString()
     }
-    console.log('You selected ' + date_obj.toISOString())
+    console.log('ISO of date selected: ' + date_obj.toISOString())
   }
 })
+
 </script>
 </html>
