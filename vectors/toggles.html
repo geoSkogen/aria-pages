@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>
+    Forms | ARIA Pages
+  </title>
+  <link rel="stylesheet" href="../css/atkinson-hyperlegible.css"/>
+  <link rel="stylesheet" href="../css/aria-pages.css"/>
+  <link rel="stylesheet" href="../css/toggles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="flex-row flex-center">
+
+  <main class="content-wrapper">
+    <h1>Toggle Types</h1>
+
+    <h2>Simple Image Toggle: CSS-only, no custom HTML</h2>
+    <p>Use when there is no access to the HTML, e.g., formulaic CMS rendering.</p>
+    <div class="field-clear flex-row flex-start">
+      <label for="enable-notifications">Enable notifications:</label>
+      <input id="enable-notifications" type="checkbox" role="switch" class="switch" name="sms">
+    </div>
+    <p>Override the checkbox appearance with an image URL in its <span class="code">content</span> property. Toggle the image URL using the <span class="code">:checked</span> pseudo-selector</p>
+    <hr/>
+    <h2>Plain Toggle: CSS and custom HTML</h2>
+    <p>Requires enough control over the HTML to enclose the checkbox in its own label element.</p>
+    <div class="field flex-row flex-start">
+      <span class="input-label" id="enable-notifications-2-label">Enable notifications:</span>
+      <label id="enable-notifications-2-toggle-switch-label" class="toggle-switch-label" for="enable-notifications-2">
+        <input id="enable-notifications-2" type="checkbox" role="switch" class="toggle-switch" aria-labelledby="enable-notifications-2-label"  name="sms_2">
+        <div id="enable-notifications-2-toggle-slider" class="toggle-slider round"></div>
+      </label>
+    </div>
+    <p>Wrap the checkbox in its own label & minimize the size of the checkbox, so the label becomes the click target. Append the label with a <span class="code">div</span> and transform/transition the absolute position of its <span class="code">:before</span> pseudo-element based the checkox's <span class="code">:checked</span> pseudo selector.  Ensure the checkbox's <span class="code">aria-labelledy</span> refers to a relevant text element.</p>
+    <hr/>
+    <h2>"Ghost" Toggle: CSS, some custom HTML, & JavaScript</h2>
+    <p>Use when custom HTML can be rendered around the field but the input and label elements are governed by formulaic CMS rendering.</p>
+    <div class="field flex-row flex-start">
+      <span class="input-label" id="enable-notifications-3-label">Enable notifications:</span>
+      <div id="enable-notifications-3-toggle-switch-label" class="toggle-switch-label" aria-labelledby="enable-notifications-3-label" data-checked="false">
+        <div id="enable-notifications-3-toggle-slider" role="switch" class="toggle-slider round ghost-toggle" tabindex="0"></div>
+      </div>
+      <br/>
+      <input id="enable-notifications-3" type="checkbox" class="ghost-toggle-switch" name="sms_3" aria-hidden="true">
+    </div>
+    <p>Assign a <span class="code">tabindex</span> and event listener to a plain <span class="code">div</span> and use the absolute position of its <span class="code">:before</span> pseudo-element to represent the toggle state.  Because div isn't a form element, utilize JavaScript to maintain its state and simultaneously transfer its state to to a hidden checkbox</p>
+  </main>
+
+</div>
+<footer></footer>
+</body>
+<script src="../lib/forms/data-toggles.js"></script>
+
+</html>

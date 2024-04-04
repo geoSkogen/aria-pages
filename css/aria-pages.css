@@ -26,7 +26,7 @@ a#skip-to-main:focus {
   height: auto;
 }
 
-button, input[type="submit"] {
+button, input[type="submit"], a.download {
   padding: 1rem;
   background-color: #0B1D84;
   color: white;

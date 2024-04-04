@@ -6,10 +6,6 @@
   display: block;
 }
 
-#login {
-  //position: absolute;
-}
-
 #login-wrapper {
   position: relative;
 }
@@ -124,23 +120,4 @@ label[for="enable-notifications"] {
 
 #enable-notifications-2-label,#enable-notifications-3-label {
   margin: 18px 18px 0 6px;
-}
-
-
-div#decoy {
-  height: 600px;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-}
-
-iframe#target {
-  top: -613px;
-  left: -3px;
-  height: 1000px;
-  width: 100%;
-  position: relative;
-  z-index: 2;
-  border: none !important;
-  opacity: 0.00001;
 }
