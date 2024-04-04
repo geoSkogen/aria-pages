@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>
+    Tabs | Design Patterns | ARIA Pages
+  </title>
+  <link rel="stylesheet" href="../css/atkinson-hyperlegible.css"/>
+  <link rel="stylesheet" href="../css/aria-pages.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="module" src="https://unpkg.com/cally"></script>
+</head>
+<body>
+  <div class="flex-row flex-center">
+    <header>
+
+      <h1>Cally  Demo 1</h1>
+    </header>
+  </div>
+  <ul id="breadcrumb-list" aria-label="breadcrumb">
+    <li><a class="breadcrumb-link" href="..">ARIA Pages</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
+    <li><span aria-current="page">Cally Demo</span></li>
+  </ul>
+  <main id="main-content">
+
+    <div class="flex-row flex-center">
+      <h2>Get Data from Calendar Component on User Interaction</h2>
+    </div>
+
+    <section id="datepicker" class="flex-row flex-center">
+      <calendar-date>
+        <calendar-month></calendar-month>
+      </calendar-date>
+    </section>
+    
+    <div class="flex-row flex-center">
+      <section id="description">
+
+        <h3>Select a date to view its ISO string:</h2>
+        <p id="iso-output">(none selected)</p>
+
+        <h4>Demo Code</h4>
+        <code class="code">
+          let cally = document.querySelector('calendar-date')<br/>
+          cally.addEventListener('change', function (event) {
+        </code>
+        <br/>
+        <code class="code" style="margin-left: 1rem">
+          let date_obj = new Date(event.target.value)
+        </code>
+        <br/>
+        <code class="code" style="margin-left: 1rem">
+          if (!isNaN(date_obj)) {
+        </code>
+        <br/>
+        <code class="code" style="margin-left: 2rem;">
+          if (iso_output_el) {
+        </code>
+        <br/>
+        <code class="code" style="margin-left: 3rem;">
+          iso_output_el.innerText = date_obj.toISOString()
+        </code>
+        <br/>
+        <code class="code" style="margin-left: 2rem;">
+          }
+        </code>
+        <br/>
+        <code class="code" style="margin-left: 2rem;">
+          console.log(date_obj.toISOString())
+        </code>
+        <br/>
+        <code class="code" style="margin-left: 1rem">
+          }
+        </code>
+        <br/>
+        <code>
+          })
+        </code>
+
+      </section>
+    </div>
+  </main>
+</body>
+<script>
+let cally = document.querySelector('calendar-date')
+cally.addEventListener('change', function (event) {
+  let date_obj = new Date(event.target.value)
+  let iso_output_el = document.getElementById('iso-output')
+  if (!isNaN(date_obj)) {
+    if (iso_output_el) {
+      iso_output_el.innerText = date_obj.toISOString()
+    }
+    console.log('You selected ' + date_obj.toISOString())
+  }
+})
+</script>
+</html>
