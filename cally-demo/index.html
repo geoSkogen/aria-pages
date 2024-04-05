@@ -8,35 +8,178 @@
   </title>
   <link rel="stylesheet" href="../css/atkinson-hyperlegible.css"/>
   <link rel="stylesheet" href="../css/aria-pages.css"/>
+  <link rel="stylesheet" href="../css/cally-demo.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="module" src="https://unpkg.com/cally"></script>
+  <style>
+
+    ::part(button[aria-pressed="true"]) {
+      color: green;
+    }
+
+    path {
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #open-datepicker {
+      padding: 0.5rem !important;
+      background-color: #00759a;
+      font-size: 24px;
+    }
+
+    #datepicker {
+      max-width: 260px;
+      padding: 0.5rem 1rem 1rem 1rem;
+      border: 1.5px solid black;
+      background-color: #f0f0f0;
+      position: absolute;
+      top: 9rem;
+      opacity: 1;
+    }
+
+    #results {
+      position: absolute;
+      top: 32rem;
+      padding: 1rem;
+      background-color: gainsboro;
+      font-weight: bold;
+      border: 1.5px solid black;
+    }
+
+    #datepicker[aria-hidden="true"] {
+      display: none;
+    }
+
+    #datepicker[aria-hidden="false"] {
+      display: block;
+    }
+
+    #results[aria-hidden="true"] {
+      display: none;
+    }
+
+    #results[aria-hidden="false"] {
+      display: block;
+    }
+
+    #close-datepicker {
+      font-size: 20px;
+      font-weight: bold;
+      color: red;
+      padding: 0.25rem;
+      display: inline-block;
+      position: relative;
+      right: -0.75rem;
+      top: -0.25rem;
+      cursor: pointer;
+      border: 2px solid transparent;
+      outline: 1.5px solid transparent;
+      border-radius: 3px;
+    }
+
+    #close-datepicker:focus {
+      border: 2px solid goldenrod;
+      outline: 1.5px solid white;
+    }
+
+    #datepicker-dialog-overlay {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      position: fixed;
+      opacity: 0.75;
+      background-color: grey;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .dialog-shell {
+      position: relative;
+    }
+
+
+  </style>
 </head>
 <body>
   <div class="flex-row flex-center">
     <header>
-      <h1>Cally  Demo 1</h1>
+      <h1>Cally Demo 1</h1>
     </header>
   </div>
 
   <main id="main-content">
 
     <div class="flex-row flex-center">
-      <h2>Get Data from User Interaction with Calendar Component</h2>
+      <h2>Get Data from Calendar UI</h2>
     </div>
-
-    <section id="datepicker" class="flex-row flex-center">
-      <calendar-date>
-        <calendar-month></calendar-month>
-      </calendar-date>
-    </section>
-
+    <div class="flex-row flex-center">
+      <button id="open-datepicker" title="open date selector" aria-label="open date selector">
+        <i id="calendar-icon" class="fa fa-calendar" aria-hidden="true"></i>
+      </button>
+      <div class="dialog-shell">
+        <div id="datepicker-dialog-overlay" class="dialog-overlay hidden"></div>
+      </div>
+    </div>
+    <div class="flex-row flex-center">
+      <h3>Select a date to view an ISO string argument.</h3>
+    </div>
+    <div  class="flex-row flex-center">
+      <section id="datepicker" aria-hidden="true" class="dialog-box" role="dialog" aria-modal="true" aria-label="select a date from calendar">
+        <div class="flex-row flex-end">
+          <span role="button" tabindex="0" id="close-datepicker" title="close calendar" aria-label="close calendar">
+            <i class="fa fa-close"></i>
+          </span>
+        </div>
+        <div  class="flex-row flex-center">
+          <calendar-date>
+            <svg
+              aria-label="Previous"
+              title="Next"
+              slot="previous"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              style="height:24px;width:24px;fill:none;stroke:#00759a;background-color:white;stroke-width:3;"
+             >
+              <path d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+            </svg>
+            <svg
+              aria-label="Next"
+              title="Next"
+              slot="next"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              style="height:24px;width:24px;fill:none;stroke:#00759a;background-color:white;stroke-width:3;"
+            >
+              <path d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+            </svg>
+            <calendar-month></calendar-month>
+          </calendar-date>
+        </div>
+      </section>
+    </div>
+    <div class="flex-row flex-center">
+      <section id="results" aria-hidden="true">
+        <code>/export-event-calendar-nodes?field_event_datetime_range_start_date=<span id="iso-output" style="display:inline-block;width:200px;">{none selected}</span></code>
+      </section>
+    </div>
     <div class="flex-row flex-center">
       <section id="description">
-
-        <h3>Select a date to view its ISO string:</h2>
-        <code>/export-event-caledar-nodes/?field_event_datetime_range_start_date=<span id="iso-output" style="display:inline-block;width:200px;">{none selected}</span></code>
-
         <h4>Demo Code</h4>
+        <code>
+          <<code>calendar-date></code>
+          <br/>
+          <code class="code" style="margin-left: 1rem"><<code>calendar-month></code><<code>/calendar-month></code></code>
+          <br/>
+          <<code>/calendar-date></code>
+        </code>
+        <br/>
+        <br/>
+        <code><<code>script></code></code>
+        <br/>
         <code class="code">
           let cally = document.querySelector('calendar-date')<br/>
           cally.addEventListener('change', function (event) {
@@ -46,24 +189,8 @@
           let date_obj = new Date(event.target.value)
         </code>
         <br/>
-        <code class="code" style="margin-left: 1rem">
-          let iso_output_el = document.getElementById('iso-output')
-        </code>
-        <br/>
-        <code class="code" style="margin-left: 1rem">
+        <code class="code" style="margin-left: 1rem">transparent
           if (!isNaN(date_obj)) {
-        </code>
-        <br/>
-        <code class="code" style="margin-left: 2rem;">
-          if (iso_output_el) {
-        </code>
-        <br/>
-        <code class="code" style="margin-left: 3rem;">
-          iso_output_el.innerText = date_obj.toISOString()
-        </code>
-        <br/>
-        <code class="code" style="margin-left: 2rem;">
-          }
         </code>
         <br/>
         <code class="code" style="margin-left: 2rem;">
@@ -77,24 +204,56 @@
         <code>
           })
         </code>
-
+        <br/>
+        <code><<code>/script></code></code>
       </section>
     </div>
   </main>
 </body>
 <script>
+(function () {
+  'use strict'
 
-let cally = document.querySelector('calendar-date')
-cally.addEventListener('change', function (event) {
-  let date_obj = new Date(event.target.value)
-  let iso_output_el = document.getElementById('iso-output')
-  if (!isNaN(date_obj)) {
-    if (iso_output_el) {
-      iso_output_el.innerText = date_obj.toISOString()
-    }
-    console.log('ISO of date selected: ' + date_obj.toISOString())
+  function showModal() {
+    document.getElementById('datepicker').setAttribute('aria-hidden', 'false')
+    document.getElementById('results').setAttribute('aria-hidden', 'false')
+    document.getElementById('datepicker-dialog-overlay').className =
+      document.getElementById('datepicker-dialog-overlay').className.replace(' hidden','')
+    document.getElementById('close-datepicker').focus()
   }
-})
 
+  function hideModal() {
+    document.getElementById('datepicker').setAttribute('aria-hidden', 'true')
+    document.getElementById('results').setAttribute('aria-hidden', 'true')
+    document.getElementById('datepicker-dialog-overlay').className += ' hidden'
+    document.getElementById('open-datepicker').focus()
+  }
+
+  let cally = document.querySelector('calendar-date')
+  cally.addEventListener('change', function (event) {
+    let date_obj = new Date(event.target.value)
+    let iso_output_el = document.getElementById('iso-output')
+    if (!isNaN(date_obj)) {
+      if (iso_output_el) {
+        iso_output_el.innerText = date_obj.toISOString()
+      }
+      console.log('ISO of date selected: ' + date_obj.toISOString())
+    }
+  })
+
+  document.getElementById('open-datepicker').addEventListener('click', function (event) {
+    showModal()
+  })
+
+  document.getElementById('close-datepicker').addEventListener('click', function (event) {
+    hideModal()
+  })
+
+  document.getElementById('close-datepicker').addEventListener('keypress', function (event) {
+    if (event.code==="Enter") {
+      hideModal()
+    }
+  })
+})()
 </script>
 </html>
