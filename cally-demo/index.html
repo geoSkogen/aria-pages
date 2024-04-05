@@ -4,7 +4,7 @@
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <title>
-    Tabs | Design Patterns | ARIA Pages
+    Cally Demo | ARIA Pages
   </title>
   <link rel="stylesheet" href="../css/atkinson-hyperlegible.css"/>
   <link rel="stylesheet" href="../css/aria-pages.css"/>
@@ -14,18 +14,14 @@
 <body>
   <div class="flex-row flex-center">
     <header>
-
       <h1>Cally  Demo 1</h1>
     </header>
   </div>
-  <ul id="breadcrumb-list" aria-label="breadcrumb">
-    <li><a class="breadcrumb-link" href="..">ARIA Pages</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
-    <li><span aria-current="page">Cally Demo</span></li>
-  </ul>
+
   <main id="main-content">
 
     <div class="flex-row flex-center">
-      <h2>Get Data from Calendar Component on User Interaction</h2>
+      <h2>Get Data from User Interaction with Calendar Component</h2>
     </div>
 
     <section id="datepicker" class="flex-row flex-center">
@@ -38,7 +34,7 @@
       <section id="description">
 
         <h3>Select a date to view its ISO string:</h2>
-        <p id="iso-output">(none selected)</p>
+        <code>/export-event-caledar-nodes/?field_event_datetime_range_start_date=<span id="iso-output" style="display:inline-block;width:200px;">{none selected}</span></code>
 
         <h4>Demo Code</h4>
         <code class="code">

