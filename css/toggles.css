@@ -4,7 +4,7 @@ input[aria-hidden="true"] {
 
 input.switch {
   appearance: none;
-  content: url('../img/toggle2-off.svg');
+  content: url('../img/toggle-off-green-mixed.svg');
   height: 40px;
   width: 40px;
   cursor: pointer;
@@ -13,7 +13,7 @@ input.switch {
 }
 
 input.switch:checked {
-  content: url('../img/toggle2-on.svg');
+  content: url('../img/toggle-on-blue-mixed.svg');
 }
 
 input.switch:focus {

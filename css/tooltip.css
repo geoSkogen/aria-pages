@@ -1,0 +1,27 @@
+.tooltip-wrapper {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 400px;
+  padding: 1rem;
+  border: 1.33px solid black;
+  background-color: #fafafa;
+}
+
+.tooltip-link {
+ padding: 1rem;
+}
+
+.hidden {
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  z-index: 0;
+  border: none;
+  padding: 0;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>
+    Tooltip | Design Patterns | ARIA Pages
+  </title>
+  <link rel="stylesheet" href="../css/atkinson-hyperlegible.css"/>
+  <link rel="stylesheet" href="../css/aria-pages.css"/>
+  <link rel="stylesheet" href="../css/tooltip.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <a id="skip-to-main" href="#main-content">Skip to main content</a>
+  <div class="flex-row flex-center">
+    <header>
+      <p class="code" aria-hidden="true"><span>&lt;</span>a11y<span>&gt;</span></p>
+      <h1>Design Patterns | Tooltip</h1>
+    </header>
+  </div>
+  <ul id="breadcrumb-list" aria-label="breadcrumb">
+    <li><a class="breadcrumb-link" href="..">ARIA Pages</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
+    <li><a class="breadcrumb-link" href="index.html">Design Patterns</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
+    <li><span aria-current="page">Tooltip</span></li>
+  </ul>
+  <main id="main-content">
+    <article>
+      <div class="flex-row flex-center">
+        <h2>Tooltip</h2>
+      </div>
+      <div class="flex-row flex-center">
+        <section>
+          <a href="#hashtag-tooltip" class="tooltip-link" aria-describedby="this-tooltip">What's a koan?</a>
+          <div class="tooltip-wrapper">
+            <span id="this-tooltip" class="tooltip hidden" role="tooltip">
+              As a form of public discourse, the koan issues a challenge to the rational mind and an opportunity for teacher and student to engage in a way that requires letting go of narratives and factual responses.
+            </span>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+</body>
+<script src="../lib/tooltip.js"></script>
+</html>

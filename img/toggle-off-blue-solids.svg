@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="850px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#3593BB" class="bi bi-toggle2-off">
+  <path
+   stroke="#3593BB"
+   d="M 9 11
+      c .628 -.836 1 -1.874 1 -3
+      a 4.978 4.978 0 0 0 -1 -3
+      h 4
+      a 3 3 0 1 1 0 6
+      H 9
+      z"
+   />
+  <path
+   fill="#004257"
+   d="M 10 8
+      A 5 5 0 1 1 0 8
+      a 5 5 0 0 1 10 0
+      z"
+   />
+</svg>

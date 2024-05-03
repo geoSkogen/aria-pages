@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="850px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="bi bi-toggle2-on">
+  <path
+   fill="#3593BB"
+   d="M 7 5
+      H 3
+      a 3 3 0 0 0 0 6
+      H 7
+      z
+    "
+   />
+  <path
+   fill="#004257"
+   d="M 16 8
+      A 5 5 0 1 1 6 8
+      a 5 5 0 0 1 10 0
+      z"
+  />
+</svg>
