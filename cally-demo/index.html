@@ -13,8 +13,48 @@
   <script type="module" src="https://unpkg.com/cally"></script>
   <style>
 
-    ::part(button[aria-pressed="true"]) {
-      color: green;
+    calendar-date {
+    /*  --color-accent: #02759a;*/
+    }
+
+    calendar-date::part(container) {
+      border: 1.33px solid black;
+      background-color: #02759a;
+      gap: 0;
+      padding-top: 0.5rem;
+    }
+
+    calendar-date::part(header) {
+      background-color: #02759a;
+      color: white;
+    }
+
+    calendar-date::part(button) {
+      border: none !important;
+      background-color: #02759a;
+      color: white;
+    }
+
+    calendar-month::part(table) {
+      background-color: white;
+    }
+
+    calendar-month::part(heading) {
+      color: white;
+      padding-bottom: 0.25rem;
+      padding-top: 0.25rem;
+    }
+
+    calendar-month::part(button) {
+      border-radius: 100%;
+    }
+
+    calendar-month::part(button):is([aria-pressed="true"]) {
+      background-color: green;
+    }
+
+    calendar-month {
+      --color-accent: #02759a;
     }
 
     path {
@@ -134,15 +174,15 @@
             <i class="fa fa-close"></i>
           </span>
         </div>
-        <div  class="flex-row flex-center">
-          <calendar-date>
+        <div id="calendar-host" class="flex-row flex-center">
+          <calendar-date first-day-of-week="0" show-outside-days="true">
             <svg
               aria-label="Previous"
               title="Next"
               slot="previous"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              style="height:24px;width:24px;fill:none;stroke:#00759a;background-color:white;stroke-width:3;"
+              style="height:24px;width:24px;fill:none;stroke:white;background-color:#00759a;stroke-width:3;"
              >
               <path d="M15.75 19.5 8.25 12l7.5-7.5"></path>
             </svg>
@@ -152,11 +192,12 @@
               slot="next"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              style="height:24px;width:24px;fill:none;stroke:#00759a;background-color:white;stroke-width:3;"
+              style="height:24px;width:24px;fill:none;stroke:white;background-color:#00759a;stroke-width:3;"
             >
               <path d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
             </svg>
-            <calendar-month></calendar-month>
+            <calendar-month>
+            </calendar-month>
           </calendar-date>
         </div>
       </section>
