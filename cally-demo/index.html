@@ -29,6 +29,10 @@
       color: white;
     }
 
+    calendar-date::part(heading) {
+      font-size: 1rem;
+    }
+
     calendar-date::part(button) {
       border: none !important;
       background-color: #02759a;
@@ -70,11 +74,8 @@
 
     #datepicker {
       max-width: 260px;
-      padding: 0.5rem 1rem 1rem 1rem;
-      border: 1.5px solid black;
-      background-color: #f0f0f0;
       position: absolute;
-      top: 9rem;
+      top: 18rem;
       opacity: 1;
     }
 
@@ -157,23 +158,29 @@
       <h2>Get Data from Calendar UI</h2>
     </div>
     <div class="flex-row flex-center">
+      <h3>Select a date to view an ISO string argument.</h3>
+    </div>
+
+    <div class="flex-row flex-center">
+      <input id="date-free-text" type="text"/>
       <button id="open-datepicker" title="open date selector" aria-label="open date selector">
         <i id="calendar-icon" class="fa fa-calendar" aria-hidden="true"></i>
       </button>
+      <!--
       <div class="dialog-shell">
         <div id="datepicker-dialog-overlay" class="dialog-overlay hidden"></div>
       </div>
+      -->
     </div>
     <div class="flex-row flex-center">
-      <h3>Select a date to view an ISO string argument.</h3>
-    </div>
-    <div  class="flex-row flex-center">
       <section id="datepicker" aria-hidden="true" class="dialog-box" role="dialog" aria-modal="true" aria-label="select a date from calendar">
+        <!--
         <div class="flex-row flex-end">
           <span role="button" tabindex="0" id="close-datepicker" title="close calendar" aria-label="close calendar">
             <i class="fa fa-close"></i>
           </span>
         </div>
+        -->
         <div id="calendar-host" class="flex-row flex-center">
           <calendar-date first-day-of-week="0" show-outside-days="true">
             <svg
@@ -202,53 +209,13 @@
         </div>
       </section>
     </div>
+
     <div class="flex-row flex-center">
       <section id="results" aria-hidden="true">
         <code>/export-event-calendar-nodes?field_event_datetime_range_start_date=<span id="iso-output" style="display:inline-block;width:200px;">{none selected}</span></code>
       </section>
     </div>
-    <div class="flex-row flex-center">
-      <section id="description">
-        <h4>Demo Code</h4>
-        <code>
-          <<code>calendar-date></code>
-          <br/>
-          <code class="code" style="margin-left: 1rem"><<code>calendar-month></code><<code>/calendar-month></code></code>
-          <br/>
-          <<code>/calendar-date></code>
-        </code>
-        <br/>
-        <br/>
-        <code><<code>script></code></code>
-        <br/>
-        <code class="code">
-          let cally = document.querySelector('calendar-date')<br/>
-          cally.addEventListener('change', function (event) {
-        </code>
-        <br/>
-        <code class="code" style="margin-left: 1rem">
-          let date_obj = new Date(event.target.value)
-        </code>
-        <br/>
-        <code class="code" style="margin-left: 1rem">transparent
-          if (!isNaN(date_obj)) {
-        </code>
-        <br/>
-        <code class="code" style="margin-left: 2rem;">
-          console.log('ISO of date selected: ' + date_obj.toISOString())
-        </code>
-        <br/>
-        <code class="code" style="margin-left: 1rem">
-          }
-        </code>
-        <br/>
-        <code>
-          })
-        </code>
-        <br/>
-        <code><<code>/script></code></code>
-      </section>
-    </div>
+
   </main>
 </body>
 <script>
@@ -257,17 +224,19 @@
 
   function showModal() {
     document.getElementById('datepicker').setAttribute('aria-hidden', 'false')
-    document.getElementById('results').setAttribute('aria-hidden', 'false')
+    //document.getElementById('results').setAttribute('aria-hidden', 'false')
+    /*
     document.getElementById('datepicker-dialog-overlay').className =
       document.getElementById('datepicker-dialog-overlay').className.replace(' hidden','')
-    document.getElementById('close-datepicker').focus()
+    */
+    //document.getElementById('close-datepicker').focus()
   }
 
   function hideModal() {
     document.getElementById('datepicker').setAttribute('aria-hidden', 'true')
-    document.getElementById('results').setAttribute('aria-hidden', 'true')
-    document.getElementById('datepicker-dialog-overlay').className += ' hidden'
-    document.getElementById('open-datepicker').focus()
+    //document.getElementById('results').setAttribute('aria-hidden', 'true')
+    //document.getElementById('datepicker-dialog-overlay').className += ' hidden'
+    //document.getElementById('open-datepicker').focus()
   }
 
   let cally = document.querySelector('calendar-date')
@@ -283,9 +252,11 @@
   })
 
   document.getElementById('open-datepicker').addEventListener('click', function (event) {
-    showModal()
+    document.getElementById('datepicker').setAttribute('aria-hidden',
+      (!JSON.parse(document.getElementById('datepicker').getAttribute('aria-hidden'))).toString()
+    )
   })
-
+  /*
   document.getElementById('close-datepicker').addEventListener('click', function (event) {
     hideModal()
   })
@@ -295,6 +266,7 @@
       hideModal()
     }
   })
+  */
 })()
 </script>
 </html>
