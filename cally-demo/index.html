@@ -52,10 +52,6 @@
       border-radius: 100%;
     }
 
-    calendar-month::part(button):is([aria-pressed="true"]) {
-      background-color: green;
-    }
-
     calendar-month {
       --color-accent: #02759a;
     }
@@ -221,30 +217,20 @@
 (function () {
   'use strict'
 
-  function showModal() {
-    document.getElementById('datepicker').setAttribute('aria-hidden', 'false')
-    //document.getElementById('results').setAttribute('aria-hidden', 'false')
-    /*
-    document.getElementById('datepicker-dialog-overlay').className =
-      document.getElementById('datepicker-dialog-overlay').className.replace(' hidden','')
-    */
-    //document.getElementById('close-datepicker').focus()
-  }
-
-  function hideModal() {
-    document.getElementById('datepicker').setAttribute('aria-hidden', 'true')
-    //document.getElementById('results').setAttribute('aria-hidden', 'true')
-    //document.getElementById('datepicker-dialog-overlay').className += ' hidden'
-    //document.getElementById('open-datepicker').focus()
-  }
-
   let cally = document.querySelector('calendar-date')
+  let date_free_text_field = document.getElementById('date-free-text')
+  let iso_output_el = document.getElementById('iso-output')
+
   cally.addEventListener('change', function (event) {
     let date_obj = new Date(event.target.value)
-    let iso_output_el = document.getElementById('iso-output')
+
     if (!isNaN(date_obj)) {
       if (iso_output_el) {
         iso_output_el.innerText = date_obj.toISOString()
+      }
+      if (date_free_text_field) {
+        date_free_text_field.value =
+          (date_obj.getMonth() + 1).toString() + '/' + (date_obj.getDate() + 1).toString() + '/' + date_obj.getFullYear()
       }
       console.log('ISO of date selected: ' + date_obj.toISOString())
     }
@@ -255,17 +241,18 @@
       (!JSON.parse(document.getElementById('datepicker').getAttribute('aria-hidden'))).toString()
     )
   })
-  /*
-  document.getElementById('close-datepicker').addEventListener('click', function (event) {
-    hideModal()
-  })
 
-  document.getElementById('close-datepicker').addEventListener('keypress', function (event) {
-    if (event.code==="Enter") {
-      hideModal()
+  date_free_text_field.addEventListener('input',function (event) {
+    let date_obj = new Date(event.target.value)
+    if (!isNaN(date_obj)) {
+       iso_output_el.innerText =
+      iso_output_el.innerText = date_obj.toISOString()
+      console.log('ISO of date entered manually: ' + date_obj.toISOString())
     }
   })
-  */
-})()
+})
+()
+
+
 </script>
 </html>
