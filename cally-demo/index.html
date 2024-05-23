@@ -233,6 +233,8 @@
           (date_obj.getMonth() + 1).toString() + '/' + (date_obj.getDate() + 1).toString() + '/' + date_obj.getFullYear()
       }
       console.log('ISO of date selected: ' + date_obj.toISOString())
+    } else {
+      console.log('Error: datepicker did not render a parsable date')
     }
   })
 
@@ -245,9 +247,11 @@
   date_free_text_field.addEventListener('input',function (event) {
     let date_obj = new Date(event.target.value)
     if (!isNaN(date_obj)) {
-       iso_output_el.innerText =
-      iso_output_el.innerText = date_obj.toISOString()
+       iso_output_el.innerText = date_obj.toISOString()
       console.log('ISO of date entered manually: ' + date_obj.toISOString())
+    } else {
+      iso_output_el.innerText = '(not set)'
+      console.log('Error: manual data entry was not a parsable date')
     }
   })
 })
