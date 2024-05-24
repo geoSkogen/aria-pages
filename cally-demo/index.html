@@ -137,7 +137,6 @@
       position: relative;
     }
 
-
   </style>
 </head>
 <body>
@@ -155,27 +154,16 @@
     <div class="flex-row flex-center">
       <h3>Select a date to view an ISO string argument.</h3>
     </div>
-
+    <!-- FIELD PROTOTYPE -->
     <div class="flex-row flex-center">
       <input id="date-free-text" type="text"/>
       <button id="open-datepicker" title="open date selector" aria-label="open date selector">
         <i id="calendar-icon" class="fa fa-calendar" aria-hidden="true"></i>
       </button>
-      <!--
-      <div class="dialog-shell">
-        <div id="datepicker-dialog-overlay" class="dialog-overlay hidden"></div>
-      </div>
-      -->
     </div>
     <div class="flex-row flex-center">
       <section id="datepicker" aria-hidden="true" class="dialog-box" role="dialog" aria-modal="true" aria-label="select a date from calendar">
-        <!--
-        <div class="flex-row flex-end">
-          <span role="button" tabindex="0" id="close-datepicker" title="close calendar" aria-label="close calendar">
-            <i class="fa fa-close"></i>
-          </span>
-        </div>
-        -->
+
         <div id="calendar-host" class="flex-row flex-center">
           <calendar-date first-day-of-week="0" show-outside-days="true">
             <svg
@@ -204,10 +192,13 @@
         </div>
       </section>
     </div>
-
+    <!-- DEMO -->
     <div class="flex-row flex-center">
       <section id="results">
-        <code>/export-event-calendar-nodes?field_event_datetime_range_start_date=<span id="iso-output" style="display:inline-block;width:200px;">{none selected}</span></code>
+        <code>/export-event-calendar-nodes?field_event_datetime_range_start_date=<span id="iso-output" style="display:inline-block;">{none selected}</span></code>
+        <br/>
+        <br/>
+        <code>calendar.gotoDate(new Date(<span id="goto-date" style="display:inline-block;">undefined</span>))</code>
       </section>
     </div>
 
@@ -217,42 +208,107 @@
 (function () {
   'use strict'
 
-  let cally = document.querySelector('calendar-date')
-  let date_free_text_field = document.getElementById('date-free-text')
-  let iso_output_el = document.getElementById('iso-output')
+  const CALLY = document.querySelector('calendar-date')
+  const DATE_FREE_TEXT_FIELD = document.getElementById('date-free-text')
+  const FULL_YEAR_PATTERN = /\d{3,4}/
+  const MONTH_ONLY_PATTERN = /^\d{1,2}$/
+  const VALID_DATE_SHORTHAND_DELIMITERS = [' ','+','/','-',' / ']
 
-  cally.addEventListener('change', function (event) {
+  // demo elements
+  let iso_output_el = document.getElementById('iso-output')
+  let goto_date_el = document.getElementById('goto-date')
+
+
+  //
+  CALLY.addEventListener('change', function (event) {
+
     let date_obj = new Date(event.target.value)
 
-    if (!isNaN(date_obj)) {
-      if (iso_output_el) {
-        iso_output_el.innerText = date_obj.toISOString()
-      }
-      if (date_free_text_field) {
-        date_free_text_field.value =
-          (date_obj.getMonth() + 1).toString() + '/' + (date_obj.getDate() + 1).toString() + '/' + date_obj.getFullYear()
-      }
-      console.log('ISO of date selected: ' + date_obj.toISOString())
-    } else {
+    if (isNaN(date_obj)) {
       console.log('Error: datepicker did not render a parsable date')
+      return
     }
+
+    // Demo arguments
+    if (iso_output_el) {
+      iso_output_el.innerText =
+      // Pass this value as a date filter to the event calendar feed
+        date_obj.toISOString()
+    }
+    if (goto_date_el) {
+      goto_date_el.innerText =
+      // Pass this value as an argument to FullCalendar::gotoDate
+        event.target.value
+    }
+
+    // Pass the datepicker value to the exposed input
+    if (DATE_FREE_TEXT_FIELD) {
+      DATE_FREE_TEXT_FIELD.value =
+        (date_obj.getMonth() + 1).toString() + '/' + (date_obj.getDate() + 1).toString() + '/' + date_obj.getFullYear()
+    }
+    console.log('ISO of date selected: ' + date_obj.toISOString())
   })
 
+
+  // Handle user text input to infer and utilize valid date filters
+  DATE_FREE_TEXT_FIELD.addEventListener('input',function (event) {
+
+    let date_obj = new Date(event.target.value)
+
+    // Attempt to parse a valid date from each user input
+    if (isNaN(date_obj)) {
+      iso_output_el.innerText = '(not set)'
+      goto_date_el.innerText = 'undefined'
+      console.log('Error: manual data entry was not a parsable date')
+      return
+    }
+
+    // Force dates entered as month-date shorthand, (e.g., "feb 11" or "2 / 11") to default to the current year:
+    // If a valid date is instatiated with only two tokens, one of them must be a full-year numeric string
+    //  in order for the date not to be set a "default" year (currently 2001)
+    for (let i = 0; i < VALID_DATE_SHORTHAND_DELIMITERS.length; i++) {
+      if (event.target.value.trim().split(VALID_DATE_SHORTHAND_DELIMITERS[i]).length===2) {
+        if (!event.target.value.trim().match(FULL_YEAR_PATTERN)) {
+          date_obj = new Date(event.target.value + ' ' + new Date().getFullYear())
+          console.log('Month-date shorthand user input will default to current year')
+          break
+        }
+      }
+    }
+
+    // Force dates entered as month-number-only to default to the current year
+    // (Dates cannot be instantiated with month names only)
+    if (event.target.value.trim().match(MONTH_ONLY_PATTERN)) {
+      date_obj = new Date(new Date().getFullYear() + ' ' + event.target.value)
+      console.log('Month-only shorthand user input will default to current year')
+    }
+
+    // Handle malformed date
+    if (isNaN(date_obj)) {
+      console.log('Error: reassigning date year resulted in a parse error')
+      return
+    }
+
+    // Demo arguments
+    if (iso_output_el) {
+      iso_output_el.innerText =
+      // Pass this value as a date filter to the event calendar feed
+        date_obj.toISOString()
+    }
+    if (goto_date_el) {
+      goto_date_el.innerText =
+      // Pass this value as an argument to FullCalendar::gotoDate
+        date_obj.getFullYear() + '-' + (date_obj.getMonth() + 1).toString() + '-' + date_obj.getDate()
+    }
+    console.log('ISO of date entered manually: ' + date_obj.toISOString())
+  })
+
+
+  // Toggle datepicker interface open/closed
   document.getElementById('open-datepicker').addEventListener('click', function (event) {
     document.getElementById('datepicker').setAttribute('aria-hidden',
       (!JSON.parse(document.getElementById('datepicker').getAttribute('aria-hidden'))).toString()
     )
-  })
-
-  date_free_text_field.addEventListener('input',function (event) {
-    let date_obj = new Date(event.target.value)
-    if (!isNaN(date_obj)) {
-       iso_output_el.innerText = date_obj.toISOString()
-      console.log('ISO of date entered manually: ' + date_obj.toISOString())
-    } else {
-      iso_output_el.innerText = '(not set)'
-      console.log('Error: manual data entry was not a parsable date')
-    }
   })
 })
 ()
