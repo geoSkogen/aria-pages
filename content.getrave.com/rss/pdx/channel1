@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>PSU Alert</title>
+    <link>http://content.getrave.com/rss/pdx/channel1</link>
+    <description>Triggers PSU Website and PSU App</description>
+    <category>PSUAlert</category>
+    <dc:subject>PSUAlert</dc:subject>
+    <item>
+      <title>OIT comms template</title>
+      <link />
+      <description>PSU SYSTEMS IMPACTED BY GLOBAL TECH OUTAGE:
+
+Crowdstrike will NOT contact you directly about this issue. Do not give your personal information to anyone claiming to be from Crowdstrike. Please forward all such emails to abuse@pdx.edu.
+
+If your PSU device has been affected and is unusable, please contact the OIT Helpdesk or your departmental IT support for assistance: www.pdx.edu/technology/support</description>
+      <pubDate>Fri, 19 Jul 2024 17:44:07 GMT</pubDate>
+      <guid />
+      <dc:date>2024-07-19T17:44:07Z</dc:date>
+    </item>
+  </channel>
+</rss>
