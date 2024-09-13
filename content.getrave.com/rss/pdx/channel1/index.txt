@@ -9,14 +9,14 @@
     <item>
       <title>OIT comms template</title>
       <link />
-      <description>TEST_2 PSU SYSTEMS IMPACTED BY GLOBAL TECH OUTAGE:
+      <description>TEST_3 PSU SYSTEMS IMPACTED BY GLOBAL TECH OUTAGE:
 
 Crowdstrike will NOT contact you directly about this issue. Do not give your personal information to anyone claiming to be from Crowdstrike. Please forward all such emails to abuse@pdx.edu.
 
 If your PSU device has been affected and is unusable, please contact the OIT Helpdesk or your departmental IT support for assistance: www.pdx.edu/technology/support</description>
       <pubDate>Fri, 19 Jul 2024 17:44:07 GMT</pubDate>
       <guid />
-      <dc:date>2024-09-13T06:45:00Z</dc:date>
+      <dc:date>2024-09-13T18:45:00Z</dc:date>
     </item>
   </channel>
 </rss>
