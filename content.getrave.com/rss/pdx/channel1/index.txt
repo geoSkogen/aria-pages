@@ -9,7 +9,7 @@
     <item>
       <title>OIT comms template</title>
       <link />
-      <description>TEST_8 PSU SYSTEMS IMPACTED BY GLOBAL TECH OUTAGE:
+      <description>TEST_9 PSU SYSTEMS IMPACTED BY GLOBAL TECH OUTAGE:
 
 Crowdstrike will NOT contact you directly about this issue. Do not give your personal information to anyone claiming to be from Crowdstrike. Please forward all such emails to abuse@pdx.edu.
 
