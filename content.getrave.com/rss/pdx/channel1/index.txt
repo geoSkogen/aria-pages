@@ -11,12 +11,7 @@
       <link />
       <description>
       TEST_19__Multiple_Link_Domains
-      www.pdx.edu link: https://www.pdx.edu/campus-safety/emergency-preparedness
-      MyPSU link: https://my.pdx.edu/community
-      Library link: https://library.pdx.edu/services/
-      MyNextSteps link: https://mynextsteps.pdx.edu/
-      apply.pdx.edu link with a query argument: https://apply.pdx.edu/register/grcoe?sys:field:gr_acad_int=d1aa11f6-a2d4-4cc5-a2b4-e55c38e3e6d2
-      Generic message body following the link list.
+      www.pdx.edu link: https://www.pdx.edu/campus-safety/emergency-preparedness MyPSU link: https://my.pdx.edu/community Library link: https://library.pdx.edu/services/ MyNextSteps link: https://mynextsteps.pdx.edu/ apply.pdx.edu link with a query argument: https://apply.pdx.edu/register/grcoe?sys:field:gr_acad_int=d1aa11f6-a2d4-4cc5-a2b4-e55c38e3e6d2 Generic message body following the link list.
       </description>
       <pubDate>Wed, 19 Mar 2025 19:00:00 GMT</pubDate>
       <guid />
