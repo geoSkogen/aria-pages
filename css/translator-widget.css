@@ -10,6 +10,12 @@ h1,h2 {
   padding: 1rem 2rem;
 }
 
+textarea[aria-hidden="true"],
+section[aria-hidden="true"],
+button[aria-hidden="true"] {
+  display: none;
+}
+
 #demo-text {
   font-size: 24px;
 }

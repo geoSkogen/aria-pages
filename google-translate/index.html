@@ -17,7 +17,7 @@
     <li><a class="breadcrumb-link" href="..">ARIA Pages</a><span class="breadcrumb-link-delimiter">&raquo;</span></li>
     <li><span aria-current="page">Google Translate</span></li>
   </ul>
-  <h2>Custom Widget w/ Sample Text</h2>
+  <h2>Sample Text</h2>
   <article class="demo-content">
     <h3>Undergraduate Programs</h3>
     <p>
@@ -36,8 +36,14 @@
       Portland State University’s online and flexible graduate programs are student-focused and led by some of the nation’s best faculty and researchers. Take the next step in your career, but on your own time. You’ll gain the network, skills and experience you need to make progress in your life, career and community on your own schedule.
     </p>
   </article>
+  <h2>Custom Text</h2>
   <div class="flex-row flex-center">
-    <textarea style="width:80%;padding:1rem;font-family:inherit !important;font-size: inherit !important;" rows="12"></textarea>
+    <textarea id="inner-text-editor" style="width:80%;padding:1rem;font-family:inherit !important;font-size: inherit !important;" rows="12" aria-hidden="false"></textarea>
+    <section tabindex=-1 id="inner-text" style="width:80%;padding:1rem;height:218px;font-family:inherit !important;font-size: inherit !important;" aria-hidden="true"></section>
+  </div>
+  <div class="flex-row flex-center">
+    <button id="submit-inner-text" style="margin:1rem;width:90px;" aria-hidden="false">Submit</button>
+    <button id="edit-inner-text" style="margin:1rem;width:90px;" aria-hidden="true">Edit</button>
   </div>
 
   <a id="open_translate_link" aria-label="open translator widget" href="#translate">
@@ -60,6 +66,7 @@
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script type="text/javascript" src="../lib/translator-widget.js"></script>
+  <script type="text/javascript" src="../lib/edit-inner-text.js"></script>
 
 </body>
 </html>
